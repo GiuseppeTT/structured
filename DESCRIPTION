@@ -1,0 +1,20 @@
+Package: structured
+Title: A Tool To Create Structured Projects
+Version: 0.0.0.9000
+Authors@R:
+    person(given = "Giuseppe",
+           family = "Tomio",
+           role = c("aut", "cre"),
+           email = "g.tinti.tomio@gmail.com")
+Description: A tool to create structured projects. The projects can be
+    created either interactively using the RStudio Project Templates
+    feature, or programmatically using the create_project function
+    exported by this package.
+License: MIT + file LICENSE
+Suggests:
+    devtools,
+    usethis
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
