@@ -108,7 +108,7 @@ copy_structure <- function(
     project_path,
     structure_name
 ) {
-    structure_root <- system.file("structure", package = "structured")
+    structure_root <- fs::path_package("structured", "structure")
     structure_path <- fs::path(structure_root, structure_name, "/.")
 
     fs::dir_copy(structure_path, project_path)
