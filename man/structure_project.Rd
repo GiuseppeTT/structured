@@ -2,10 +2,22 @@
 % Please edit documentation in R/structure-project.R
 \name{structure_project}
 \alias{structure_project}
-\title{Create structured project}
+\title{Create a structured project}
 \usage{
-structure_project()
+structure_project(
+  project_path,
+  project_level = c("Basic", "Intermediate"),
+  analysis_format = c("Script", "R Markdown", "R Markdown (Structured)", "Shiny")
+)
+}
+\arguments{
+\item{project_path}{Path to the new project.}
+
+\item{project_level}{Project level. One of "Basic" or "Intermediate".}
+
+\item{analysis_format}{Analysis format. One of "Script", "R Markdown", "R Markdown (Structured)" or
+"Shiny".}
 }
 \description{
-Create structured project
+Create a structured project from a given template.
 }
