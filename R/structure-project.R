@@ -78,8 +78,8 @@ copy_project_level_structure <- function(
 ) {
     project_level_path <- switch(
         project_level,
-        "Basic" = "project-level/basic",
-        "Intermediate" = "project-level/intermediate",
+        "Basic" = "basic",
+        "Intermediate" = "intermediate",
         stop("Invalid project level")
     )
     project_level_path <- fs::path("project-level", project_level_path)
