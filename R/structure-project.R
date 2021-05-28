@@ -59,28 +59,25 @@ structure_project <- function(
 
     fs::dir_create(project_path, recurse = TRUE)
 
+    copy_files(project_path, project_level, analysis_format)
+    fill_files(project_path, project_level, analysis_format)
+    clean_files(project_path)
+}
+
+copy_files <- function(
+    project_path,
+    project_level,
+    analysis_format
+) {
     copy_base_structure(project_path)
     copy_project_level_structure(project_path, project_level)
     copy_analysis_format_structure(project_path, analysis_format)
-
-    delete_gitkeeps(project_path)
 }
 
 copy_base_structure <- function(
     project_path
 ) {
     copy_structure(project_path, "base")
-    rename_rproj(project_path)
-}
-
-rename_rproj <- function(
-    project_path
-) {
-    project_slug <- fs::path_file(project_path)
-    old_rproj <- fs::path(project_path, "{{project_slug}}.Rproj")
-    new_rproj <- fs::path(project_path, paste0(project_slug, ".Rproj"))
-
-    fs::file_move(old_rproj, new_rproj)
 }
 
 copy_project_level_structure <- function(
@@ -123,6 +120,39 @@ copy_structure <- function(
     structure_path <- fs::path(structure_root, structure_name, "/.")
 
     fs::dir_copy(structure_path, project_path)
+}
+
+fill_files <- function(
+    project_path,
+    project_level,
+    analysis_format
+) {
+    data <- list(
+        project_slug = fs::file_name(project_path)
+    )
+
+    fill_file_names(project_path, data)
+    fill_file_contents(project_path, data)
+}
+
+fill_file_names <- function(
+    project_path,
+    data
+) {
+
+}
+
+fill_file_contents <- function(
+    project_path,
+    data
+) {
+
+}
+
+clean_files <- function(
+    project_path
+) {
+    delete_gitkeeps(project_path)
 }
 
 delete_gitkeeps <- function(
