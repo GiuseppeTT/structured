@@ -70,6 +70,17 @@ copy_base_structure <- function(
     project_path
 ) {
     copy_structure(project_path, "base")
+    rename_rproj(project_path)
+}
+
+rename_rproj <- function(
+    project_path
+) {
+    project_slug <- fs::path_file(project_path)
+    old_rproj <- fs::path(project_path, "{{project_slug}}.Rproj")
+    new_rproj <- fs::path(project_path, paste0(project_slug, ".Rproj"))
+
+    fs::file_move(old_rproj, new_rproj)
 }
 
 copy_project_level_structure <- function(
