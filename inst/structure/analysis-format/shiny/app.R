@@ -11,7 +11,9 @@ source("R/server.R")
 
 
 # Define options ---------------------------------------------------------------
-options(shiny.autoload.r = FALSE)
+options(
+    shiny.autoload.r = FALSE  # Prevents shiny from automatically loading the R/ directory
+)
 
 
 # Run app ----------------------------------------------------------------------
