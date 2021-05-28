@@ -43,10 +43,9 @@ fill_file_names <- function(
         type = "file"
     )
 
-    new_paths <-
-        old_paths %>%
-        purrr::map_chr(glue_file_path, .variables = variables) %>%
-        fs::as_fs_path()
+    new_paths <- lapply(old_paths, glue_file_path, .variables = variables)
+    new_paths <- unlist(new_paths, use.names = FALSE)
+    new_paths <- fs::as_fs_path(new_paths)
 
     fs::file_move(old_paths, new_paths)
 }
@@ -78,8 +77,7 @@ fill_file_contents <- function(
         type = "file"
     )
 
-    project_files %>%
-        purrr::map(glue_file_content, .variables = variables)
+    lapply(project_files, glue_file_content, .variables = variables)
 }
 
 glue_file_content <- function(

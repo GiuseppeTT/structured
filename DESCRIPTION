@@ -13,9 +13,7 @@ Description: A tool to create structured projects. The projects can be
 License: MIT + file LICENSE
 Imports:
     fs,
-    glue,
-    magrittr,
-    purrr,
+    glue
 Suggests:
     devtools,
     usethis
