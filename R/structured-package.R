@@ -4,7 +4,7 @@
 #' @description
 #' A tool to create structured projects. The projects can be created either
 #' interactively using the RStudio Project Templates feature, or
-#' programmatically using the [structure_project] function exported by this
+#' programmatically using the [structure_project()] function exported by this
 #' package.
 #'
 #' @keywords internal
