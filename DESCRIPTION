@@ -14,7 +14,8 @@ License: MIT + file LICENSE
 Imports:
     fs,
     glue,
-    whisker
+    magrittr,
+    purrr,
 Suggests:
     devtools,
     usethis

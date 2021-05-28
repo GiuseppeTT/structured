@@ -1,7 +1,7 @@
-# Cool project name
+# {{project_name}}
 
 ## Description
 This is a cool project!
 
 ## How to run
-It is easy, just do BLAH BLAH BLAH.
+It is easy, just {{how_to_run}}.
