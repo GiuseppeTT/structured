@@ -12,7 +12,7 @@ delete_gitkeeps <- function(
         all = TRUE,
         recurse = TRUE,
         type = "file",
-        regexp = ".gitkeep$"
+        regexp = "\\.gitkeep$"
     )
 
     fs::file_delete(gitkeep_paths)
