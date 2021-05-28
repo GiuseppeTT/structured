@@ -8,7 +8,7 @@ Authors@R:
            email = "g.tinti.tomio@gmail.com")
 Description: A tool to create structured projects. The projects can be
     created either interactively using the RStudio Project Templates
-    feature, or programmatically using the create_project function
+    feature, or programmatically using the structure_project function
     exported by this package.
 License: MIT + file LICENSE
 Suggests:
@@ -18,3 +18,5 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Imports: 
+    fs
