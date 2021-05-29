@@ -24,7 +24,7 @@ get_project_name <- function(
     project_path
 ) {
     project_slug <- get_project_slug(project_path)
-    project_name <- toupper(gsub("[-_]", " ", project_slug))
+    project_name <- gsub("[-_]", " ", project_slug)
 
     return(project_name)
 }
