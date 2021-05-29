@@ -29,6 +29,7 @@ glue_file_base <- function(
         .file,
         .open = "{{",
         .close = "}}",
+        .trim = FALSE,
         ...
     )
 
