@@ -19,7 +19,7 @@ test_that("Project creation works", {
     expect_error(iterate_project_combinations(), NA)
 })
 
-test_that("There are no template files", {
+test_that("There are no name template files", {
     iterate_project_combinations(function(project_path) {
         name_template_files <- fs::dir_ls(
             project_path,
@@ -29,7 +29,11 @@ test_that("There are no template files", {
             regexp = "\\{\\{.*\\}\\}$"
         )
         expect_length(name_template_files, 0)
+    })
+})
 
+test_that("There are no content template files", {
+    iterate_project_combinations(function(project_path) {
         fs::dir_map(
             project_path,
             fun = function(path) {
