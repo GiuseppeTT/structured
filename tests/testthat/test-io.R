@@ -2,7 +2,7 @@ test_that("read_file works", {
     path <- fs::path_package("structured", "test/test.txt")
     content <- read_file(path)
 
-    expect_equal(content, "123\ntest\n")
+    expect_equal(content, "123\n{{test}}\n")
 })
 
 test_that("read(write(read(path))) works", {
