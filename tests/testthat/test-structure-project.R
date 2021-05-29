@@ -15,7 +15,7 @@ iterate_project_combinations <- function(
     }
 }
 
-test_that("Project creation works", {
+test_that("structure_project works", {
     expect_error(iterate_project_combinations(), NA)
 })
 
