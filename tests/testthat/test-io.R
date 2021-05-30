@@ -1,5 +1,5 @@
 test_that("read_file works", {
-    path <- fs::path_package("structured", "test/{{test}}.txt")
+    path <- fs::path_package("structured", "tests-auxiliar/{{test}}.txt")
 
     content <- read_file(path)
 
@@ -7,7 +7,7 @@ test_that("read_file works", {
 })
 
 test_that("read(write(read(path))) works", {
-    path <- fs::path_package("structured", "test/{{test}}.txt")
+    path <- fs::path_package("structured", "tests-auxiliar/{{test}}.txt")
 
     first_content <- read_file(path)
     write_file(path, first_content)

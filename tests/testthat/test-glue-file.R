@@ -20,7 +20,7 @@ test_that("glue_file_path works", {
 })
 
 test_that("glue_file_content works", {
-    test_path <- fs::path_package("structured", "test/{{test}}.txt")
+    test_path <- fs::path_package("structured", "tests-auxiliar/{{test}}.txt")
     path <- fs::file_temp()
     fs::file_copy(test_path, path)
     variables <- list(test = "my-variable")
