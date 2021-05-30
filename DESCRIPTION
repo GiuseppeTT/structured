@@ -16,6 +16,7 @@ Imports:
     glue
 Suggests:
     devtools,
+    withr,
     testthat (>= 3.0.0),
     usethis
 Config/testthat/edition: 3

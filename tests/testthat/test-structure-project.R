@@ -1,26 +1,41 @@
-iterate_project_combinations <- function(
-    expectation_function = function(...) invisible(NULL)
+get_argument <- function(
+    function_,
+    argument,
+    environment = parent.frame()
 ) {
-    structure_project_arguments <- formals(structure_project)
-    project_levels <- eval(structure_project_arguments$project_level)
-    analysis_formats <- eval(structure_project_arguments$analysis_format)
+    arguments <- formals(function_)
+    argument_value <- arguments[[argument]]
+
+    if (is.call(argument_value))
+        argument_value <- eval(argument_value, envir = environment)
+
+    return(argument_value)
+}
+
+iterate_structures <- function(
+    expectation_function = function(...) expect_true(TRUE)
+) {
+    project_levels <- get_argument(structure_project, "project_level")
+    analysis_formats <- get_argument(structure_project, "analysis_format")
 
     for (project_level in project_levels) {
         for (analysis_format in analysis_formats) {
-            project_path <- fs::file_temp()
+            local_test_directory()
+
+            project_path <- fs::path("my-project")
             structure_project(project_path, project_level, analysis_format)
+
             expectation_function(project_path, project_level, analysis_format)
-            fs::dir_delete(project_path)
         }
     }
 }
 
 test_that("structure_project works", {
-    expect_error(iterate_project_combinations(), NA)
+    expect_error(iterate_structures(), NA)
 })
 
 test_that("There are no name template files", {
-    iterate_project_combinations(function(project_path, project_level, analysis_format) {
+    iterate_structures(function(project_path, project_level, analysis_format) {
         name_template_files <- fs::dir_ls(
             project_path,
             all = TRUE,
@@ -33,7 +48,7 @@ test_that("There are no name template files", {
 })
 
 test_that("There are no content template files", {
-    iterate_project_combinations(function(project_path, project_level, analysis_format) {
+    iterate_structures(function(project_path, project_level, analysis_format) {
         fs::dir_map(
             project_path,
             fun = function(file_path) {
@@ -49,7 +64,7 @@ test_that("There are no content template files", {
 })
 
 test_that("There are no .gitkeep files", {
-    iterate_project_combinations(function(project_path, project_level, analysis_format) {
+    iterate_structures(function(project_path, project_level, analysis_format) {
         gitkeep_paths <- fs::dir_ls(
             project_path,
             all = TRUE,
