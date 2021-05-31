@@ -1,3 +1,4 @@
 ^\.devcontainer$
+^\.github$
 ^\.Rproj\.user$
 ^structured\.Rproj$
