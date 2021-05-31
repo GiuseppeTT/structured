@@ -24,7 +24,6 @@ iterate_structures <- function(
 
             project_path <- fs::path("my-project")
             structure_project(project_path, project_level, analysis_format)
-
             expectation_function(project_path, project_level, analysis_format)
         }
     }

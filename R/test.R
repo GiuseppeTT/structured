@@ -4,7 +4,7 @@ local_test_directory <- function(
     path <- withr::local_tempdir(.local_envir = envir)
     withr::local_dir(path, .local_envir = envir)
 
-    invisible(path)
+    return(invisible(path))
 }
 
 copy_test_file <- function(
