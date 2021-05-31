@@ -2,4 +2,5 @@
 ^\.github$
 ^\.lintr$
 ^\.Rproj\.user$
+^makefile$
 ^structured\.Rproj$
