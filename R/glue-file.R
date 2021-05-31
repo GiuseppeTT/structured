@@ -3,9 +3,9 @@ glue_file_path <- function(
     .variables,
     ...
 ) {
-    file_path <- glue_file_base(.path, .variables, ...)
+    new_path <- glue_file_base(.path, .variables, ...)
 
-    return(file_path)
+    fs::file_move(.path, new_path)
 }
 
 glue_file_content <- function(
@@ -29,6 +29,7 @@ glue_file_base <- function(
         .file,
         .open = "{{",
         .close = "}}",
+        .trim = FALSE,
         ...
     )
 
