@@ -1,12 +1,12 @@
 Package: structured
-Title: A Tool To Create Structured Projects
+Title: A Tool To Create Structured R Projects
 Version: 0.0.0.9000
 Authors@R:
     person(given = "Giuseppe",
            family = "Tomio",
            role = c("aut", "cre"),
            email = "g.tinti.tomio@gmail.com")
-Description: A tool to create structured projects. The projects can be
+Description: A tool to create structured R projects. The projects can be
     created either interactively using the RStudio Project Templates
     feature, or programmatically using the structure_project function
     exported by this package.
