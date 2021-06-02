@@ -1,9 +1,9 @@
 # structured
 
 <!-- badges: start -->
+![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
 ![R-CMD-check](https://github.com/GiuseppeTT/structured/workflows/R-CMD-check/badge.svg)
 ![lint](https://github.com/GiuseppeTT/structured/workflows/lint/badge.svg)
-![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
 <!-- badges: end -->
 
 The `structured` package is a tool to create structured R projects. You can check its documentation [here](https://giuseppett.github.io/structured).
