@@ -27,11 +27,12 @@ That's it! You can start coding now.
 
 ```r
 library(structured)
+
 structure_project(
-    project_path = "my-cool-project",  # Choose your project directory name
-    project_level = "Basic"  # One of "Basic" or "Intermediate",
-    analysis_format = "Script"  # One of "Script", "R Markdown", "R Markdown (Structured)" or "Shiny"
+    project_path = "my-cool-project",  # You can use either a realtive or an absolute path
+    project_level = "Basic"
+    analysis_format = "Script"
 )
 ```
 
-That's it! You can start coding now.
+That's it! You can start coding now. For more information check `?structure_project()` documentation.
