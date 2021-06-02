@@ -11,6 +11,8 @@ Description: A tool to create structured R projects. The projects can be
     feature, or programmatically using the structure_project function
     exported by this package.
 License: MIT + file LICENSE
+URL: https://giuseppett.github.io/structured
+    https://github.com/GiuseppeTT/structured
 Imports:
     fs,
     glue
