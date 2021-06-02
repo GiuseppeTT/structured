@@ -7,10 +7,6 @@ install_dependencies:
 test:
 	Rscript -e 'devtools::test()'
 
-.PHONY: document
-document:
-	Rscript -e 'devtools::document()'
-
 .PHONY: check
 check:
 	Rscript -e 'devtools::check()'
@@ -20,8 +16,13 @@ install:
 	Rscript -e 'devtools::install()'
 
 .PHONY: lint
-lint:
-	Rscript -e 'lintr::lint_package()'
+lint: install
+	Rscript -e 'devtools::lint(cache = FALSE)'
+
+.PHONY: document
+document:
+	Rscript -e 'devtools::document()'
+	Rscript -e 'devtools::build_site(quiet = FALSE)'
 
 .PHONY: all
-all: test document check install lint
+all: check install lint document
