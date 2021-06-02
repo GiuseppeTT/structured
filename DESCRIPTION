@@ -1,24 +1,27 @@
 Package: structured
-Title: A Tool To Create Structured Projects
+Title: A Tool To Create Structured R Projects
 Version: 0.0.0.9000
 Authors@R:
     person(given = "Giuseppe",
            family = "Tomio",
            role = c("aut", "cre"),
            email = "g.tinti.tomio@gmail.com")
-Description: A tool to create structured projects. The projects can be
+Description: A tool to create structured R projects. The projects can be
     created either interactively using the RStudio Project Templates
     feature, or programmatically using the structure_project function
     exported by this package.
 License: MIT + file LICENSE
+URL: https://giuseppett.github.io/structured,
+    https://github.com/GiuseppeTT/structured
 Imports:
     fs,
     glue
 Suggests:
     devtools,
-    withr,
+    lintr,
     testthat (>= 3.0.0),
-    usethis
+    usethis,
+    withr
 Config/testthat/edition: 3
 Encoding: UTF-8
 LazyData: true

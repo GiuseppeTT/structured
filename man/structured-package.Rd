@@ -11,6 +11,14 @@ interactively using the RStudio Project Templates feature, or
 programmatically using the \code{\link[=structure_project]{structure_project()}} function exported by this
 package.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://giuseppett.github.io/structured}
+  \item \url{https://github.com/GiuseppeTT/structured}
+}
+
+}
 \author{
 \strong{Maintainer}: Giuseppe Tomio \email{g.tinti.tomio@gmail.com}
 
