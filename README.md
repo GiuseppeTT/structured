@@ -42,4 +42,4 @@ structure_project(
 )
 ```
 
-That's it! You can start coding now. For more information check `?structure_project()` documentation.
+That's it! You can start coding now. For more information check `?structure_project` documentation.
