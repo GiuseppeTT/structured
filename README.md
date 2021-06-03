@@ -20,7 +20,7 @@ remotes::install_github("GiuseppeTT/structured")
 
 ### In RStudio
 
-![usage-rstudio-gif](https://github.com/GiuseppeTT/structured/tree/main/man/figures/usage-rstudio.gif)
+<img src="man/figures/usage-rstudio.gif" />
 
 Follow these steps:
 
