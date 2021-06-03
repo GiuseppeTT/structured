@@ -16,6 +16,7 @@ Useful links:
 \itemize{
   \item \url{https://giuseppett.github.io/structured}
   \item \url{https://github.com/GiuseppeTT/structured}
+  \item Report bugs at \url{https://github.com/GiuseppeTT/structured/issues}
 }
 
 }
