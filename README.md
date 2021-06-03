@@ -19,6 +19,9 @@ remotes::install_github("GiuseppeTT/structured")
 ## Usage
 
 ### In RStudio
+
+![usage-rstudio-gif](https://github.com/GiuseppeTT/structured/tree/main/man/figures/usage-rstudio.gif)
+
 Follow these steps:
 
 - In the top bar, click "File" and then "New Project..."
