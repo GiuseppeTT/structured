@@ -1,5 +1,4 @@
 # structured
-
 <!-- badges: start -->
 ![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
 ![R-CMD-check](https://github.com/GiuseppeTT/structured/workflows/R-CMD-check/badge.svg)
@@ -17,9 +16,7 @@ remotes::install_github("GiuseppeTT/structured")
 ```
 
 ## Usage
-
 ### In RStudio
-
 <img src="man/figures/usage-rstudio.gif" />
 
 Follow these steps:
