@@ -35,11 +35,22 @@ That's it! You can start coding now.
 ```r
 library(structured)
 
+# project_path can be either a relative or an absolute path
+#
+# project_level must be one of:
+# - "Basic"
+# - "Intermediate"
+#
+# analysis_format must be one of:
+# - "Script"
+# - "R Markdown"
+# - "R Markdown (Structured)"
+# - "Shiny"
 structure_project(
-    project_path = "my-cool-project",  # You can use either a realtive or an absolute path
-    project_level = "Basic"
+    project_path = "my-cool-project",
+    project_level = "Basic",
     analysis_format = "Script"
 )
 ```
 
-That's it! You can start coding now. For more information check `?structure_project` documentation.
+That's it! You can start coding now.
