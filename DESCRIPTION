@@ -13,6 +13,7 @@ Description: A tool to create structured R projects. The projects can be
 License: MIT + file LICENSE
 URL: https://giuseppett.github.io/structured,
     https://github.com/GiuseppeTT/structured
+BugReports: https://github.com/GiuseppeTT/structured/issues
 Imports:
     fs,
     glue
