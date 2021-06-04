@@ -104,14 +104,26 @@
 <h3 class="hasAnchor">
 <a href="#in-r-console" class="anchor"></a>In R console</h3>
 <p><strong>Modify</strong> and paste these commands in your R console:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">library</span>(structured)</a>
-<a class="sourceLine" id="cb2-2" title="2"></a>
-<a class="sourceLine" id="cb2-3" title="3"><span class="kw">structure_project</span>(</a>
-<a class="sourceLine" id="cb2-4" title="4">    <span class="dt">project_path =</span> <span class="st">"my-cool-project"</span>,  <span class="co"># You can use either a realtive or an absolute path</span></a>
-<a class="sourceLine" id="cb2-5" title="5">    <span class="dt">project_level =</span> <span class="st">"Basic"</span></a>
-<a class="sourceLine" id="cb2-6" title="6">    <span class="dt">analysis_format =</span> <span class="st">"Script"</span></a>
-<a class="sourceLine" id="cb2-7" title="7">)</a></code></pre></div>
-<p>That’s it! You can start coding now. For more information check <code><a href="reference/structure_project.html">?structure_project</a></code> documentation.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://giuseppett.github.io/structured">structured</a></span><span class="op">)</span>
+
+<span class="co"># project_path can be either a relative or an absolute path</span>
+<span class="co">#</span>
+<span class="co"># project_level must be one of:</span>
+<span class="co"># - "Basic"</span>
+<span class="co"># - "Intermediate"</span>
+<span class="co">#</span>
+<span class="co"># analysis_format must be one of:</span>
+<span class="co"># - "Script"</span>
+<span class="co"># - "R Markdown"</span>
+<span class="co"># - "R Markdown (Structured)"</span>
+<span class="co"># - "Shiny"</span>
+<span class="fu"><a href="reference/structure_project.html">structure_project</a></span><span class="op">(</span>
+    project_path <span class="op">=</span> <span class="st">"my-cool-project"</span>,
+    project_level <span class="op">=</span> <span class="st">"Basic"</span>,
+    analysis_format <span class="op">=</span> <span class="st">"Script"</span>
+<span class="op">)</span></code></pre></div>
+<p>That’s it! You can start coding now.</p>
 </div>
 </div>
 </div>
