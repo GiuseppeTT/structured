@@ -20,11 +20,15 @@ Imports:
     rstudioapi
 Suggests:
     devtools,
+    knitr,
     lintr,
     rlang,
+    rmarkdown,
     testthat (>= 3.0.0),
     usethis,
     withr
+VignetteBuilder:
+    knitr
 Config/testthat/edition: 3
 Encoding: UTF-8
 LazyData: true
