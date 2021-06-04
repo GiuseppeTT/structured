@@ -5,6 +5,6 @@ OpenFiles: README.md
 Parameter: analysis_format
 Widget: SelectInput
 Label: Analysis Format
-Fields: Script, R Markdown (Simplified), R Markdown, Shiny
+Fields: Script, R Markdown (Simplified), R Markdown, Targets, Shiny
 Default: Script
 Position: Left
