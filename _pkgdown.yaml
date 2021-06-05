@@ -13,4 +13,4 @@ navbar:
     structures:
       text: Structures
       href: articles/structures.html
-    articles: ~
+    articles: null
