@@ -9,8 +9,14 @@ vignette: >
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
-   collapse = TRUE,
-   comment = "#>"
+    collapse = TRUE,
+    comment = "#>"
+)
+
+root <- tempfile()
+dir.create(root)
+knitr::opts_knit$set(
+    root.dir = root
 )
 
 # Activate crayon
@@ -20,8 +26,6 @@ old_hooks <- fansi::set_knit_hooks(
     knitr::knit_hooks,
     which = c("output", "message", "error")
 )
-
-structured:::local_test_directory()
 ```
 
 The `structured` package revolves around the concept of strucures, which is a fancy name for project templates. Well, strongly *structured* project templates. So, to make the most of `structured`, it is essential to understand those structures to select the most adequate for your project.
@@ -46,7 +50,6 @@ library(structured)
 Text.
 
 ```{r}
-structured:::local_test_directory()
 structure_project(
     "basic-project",
     project_level = "Basic",
@@ -59,7 +62,6 @@ dir_tree("basic-project", all = TRUE)
 Text.
 
 ```{r}
-structured:::local_test_directory()
 structure_project(
     "intermediate-project",
     project_level = "Intermediate",
@@ -73,7 +75,6 @@ dir_tree("intermediate-project", all = TRUE)
 Text.
 
 ```{r}
-structured:::local_test_directory()
 structure_project(
     "script-project",
     project_level = "Basic",
@@ -86,7 +87,6 @@ dir_tree("script-project", all = TRUE)
 Text.
 
 ```{r}
-structured:::local_test_directory()
 structure_project(
     "r-markdown-project",
     project_level = "Basic",
@@ -99,7 +99,6 @@ dir_tree("r-markdown-project", all = TRUE)
 Text.
 
 ```{r}
-structured:::local_test_directory()
 structure_project(
     "r-markdown-structured-project",
     project_level = "Basic",
@@ -112,7 +111,6 @@ dir_tree("r-markdown-structured-project", all = TRUE)
 Text.
 
 ```{r}
-structured:::local_test_directory()
 structure_project(
     "shiny-project",
     project_level = "Basic",
