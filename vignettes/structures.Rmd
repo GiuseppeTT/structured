@@ -1,19 +1,114 @@
 ---
-title: "structures"
+title: "Structures"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{structures}
+  %\VignetteIndexEntry{Structures}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
+   collapse = TRUE,
+   comment = "#>"
 )
+
+structured:::local_test_directory()
 ```
 
-```{r setup}
+The `structured` package revolves around the concept of strucures, which is a fancy name for project templates. Well, strongly *structured* project templates. So, to make the most of `structured`, it is essential to understand those structures to select the most adequate for your project.
+
+Projects are mean to an end. Be it analyzing a dataset for a class project or creating a dashboard for a business. `structured` defines each kind of project by a combination of two values. The first is **project level** and determines **how complex** your project will be^[Usually complex problems demand complex solution (but simpler solutions are better!).]. The second is **analysis format** and specify **how** your project will solve the problem. The next sections give more details about each option those values can assume.
+
+Before we start, it is important to load some packages. The `fs` package is necessary to show the projects directory tree.
+
+```{r}
+# Uncomment to install packages
+## install.packages("fs")
+## install.packages("remotes")
+## remotes::install_github("GiuseppeTT/structured")
+
+# Load packages
+library(fs)
 library(structured)
+```
+
+## Project level
+### Basic
+Text.
+
+```{r}
+structured:::local_test_directory()
+structure_project(
+    "basic-project",
+    project_level = "Basic",
+    analysis_format = "Script"
+)
+dir_tree("basic-project", all = TRUE)
+```
+
+### Intermediate
+Text.
+
+```{r}
+structured:::local_test_directory()
+structure_project(
+    "intermediate-project",
+    project_level = "Intermediate",
+    analysis_format = "Script"
+)
+dir_tree("intermediate-project", all = TRUE)
+```
+
+## Analysis format
+### Script
+Text.
+
+```{r}
+structured:::local_test_directory()
+structure_project(
+    "script-project",
+    project_level = "Basic",
+    analysis_format = "Script"
+)
+dir_tree("script-project", all = TRUE)
+```
+
+### R Markdown
+Text.
+
+```{r}
+structured:::local_test_directory()
+structure_project(
+    "r-markdown-project",
+    project_level = "Basic",
+    analysis_format = "R Markdown"
+)
+dir_tree("r-markdown-project", all = TRUE)
+```
+
+### R Markdown (Structured)
+Text.
+
+```{r}
+structured:::local_test_directory()
+structure_project(
+    "r-markdown-structured-project",
+    project_level = "Basic",
+    analysis_format = "R Markdown (Structured)"
+)
+dir_tree("r-markdown-structured-project", all = TRUE)
+```
+
+### Shiny
+Text.
+
+```{r}
+structured:::local_test_directory()
+structure_project(
+    "shiny-project",
+    project_level = "Basic",
+    analysis_format = "Shiny"
+)
+dir_tree("shiny-project", all = TRUE)
 ```
