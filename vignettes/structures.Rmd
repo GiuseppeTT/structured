@@ -13,6 +13,14 @@ knitr::opts_chunk$set(
    comment = "#>"
 )
 
+# Activate crayon
+## https://github.com/r-lib/crayon/issues/24
+options(crayon.enabled = TRUE)
+old_hooks <- fansi::set_knit_hooks(
+    knitr::knit_hooks,
+    which = c("output", "message", "error")
+)
+
 structured:::local_test_directory()
 ```
 
