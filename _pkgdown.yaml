@@ -1,0 +1,25 @@
+navbar:
+  structure:
+    left:
+      - home
+      - structures
+      - reference
+      - articles
+      - tutorials
+      - news
+    right:
+      - github
+  components:
+    home:
+      icon: fas fa-home fa-lg
+      href: index.html
+    structures:
+      text: Structures
+      href: articles/structures.html
+    reference:
+      text: Reference
+      href: reference/index.html
+    articles: ~
+    github:
+      icon: fab fa-github fa-lg
+      href: https://github.com/GiuseppeTT/structured/
