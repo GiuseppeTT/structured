@@ -28,9 +28,9 @@ old_hooks <- fansi::set_knit_hooks(
 )
 ```
 
-The `structured` package revolves around the concept of strucures, which is a fancy name for project templates. Well, strongly *structured* project templates. So, it is essential to understand those structures to select the most adequate for your project.
+`structured` revolves around the concept of strucures, which is a fancy name for project templates. Well, strongly *structured* project templates. So, it is essential to understand those structures to select the most adequate for your project.
 
-Project is a means to an end. Be it analyzing a dataset for a class project or creating a dashboard for a business. `structured` defines each kind of project by a combination of two values. The first is **project level** and determines **how complex** your project will be^[Usually, complex problems demand complex solution.]. The second is **analysis format** and specifies **how** your project will solve the problem. The next sections give more details about each option those values can assume.
+Project is a means to an end. Be it analyzing a dataset for a class project or creating a dashboard for a business. `structured` defines projects by a combination of two values. The first is **project level** and determines **how complex** your project will be^[We should always aim for the simplest solution, but sometimes complexity is unavoidable.]. The second is **analysis format** and specifies **how** your project will solve the problem. The next sections give more details about each option those values can assume.
 
 Before we start, it is important to load some packages.
 
@@ -47,7 +47,9 @@ library(structured)
 
 ## Project level
 ### Basic
-Except for the `analysis.R` file^[The `analysis.R` file comes from the "script analysis format", which is the default analysis format value. It is included because `structure_project()` needs both `project_level` and `analysis_format` supplied.], the "basic project level" structure has the following files:
+The "basic project level" structure is simple, minimal, but complete enough to accomodate all the analysis formats. In other words, a perfect starting point for newbies and an excelent use for quick and simple projects.
+
+Except for the `analysis.R` file^[The `analysis.R` file comes from the "script analysis format", which is the default analysis format value. It is included because `structure_project()` needs both `project_level` and `analysis_format` supplied.], the structure is composed of the following files:
 
 ```{r}
 structure_project(
@@ -58,25 +60,23 @@ structure_project(
 dir_tree("basic-project", all = TRUE)
 ```
 
-This structure is simple, minimal, but complete enough to accomodate all the analysis formats. In other words, a perfect starting point for newbies and an excelent use for quick and simple projects.
-
 The purpose of each file/folder is the following:
 
 - `data/` Save all the pertaining data. For example csv tabular data, the cleaned version of the csv tabular data or even a SQLite database file.
 
-- `output/` Save anything generated that isn't data. For instance figures, tables, models, reports, presentation, etc.
+- `output/` Save anything generated that is not data. For instance figures, tables, models, reports, presentation, etc.
 
-- `extra/` Save any file that isn't data, output or code but is related to the project. Some cases are professor instructions about the class project or some meeting notes.
+- `extra/` Save any file that is not data, output or code but is related to the project. Some cases are professor instructions about the class project and meeting notes.
 
-- `R/` Save auxiliar R files. That is, files that are not run directly but are used by those run files. Some examples are `functions.R` (described next) and `ui.R` and `sever.R` used by {shiny}.
+- `R/` Save auxiliar R files. That is, files that are not run directly but are used by those run files. Some examples are `ui.R` and `sever.R`, which are used by the shiny package.
 
-- `R/functions.R` Write your R functions used in the rest of the project.
+- `R/functions.R` Write your R functions used in the rest of the project. This helps keeping your code more organized, similar to the effect of adding subfolder such as `data/` to organize your files.
 
 - `basic-project.Rproj` (`<project-directory>.Rproj`) RStudio project file. This [article](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) from Jenny Brian and this [chapter](https://r4ds.had.co.nz/workflow-projects.html) from R For Data Science book are great reference. In short, this little guy allows you to break free from all the evil that comes from `setwd("obscure/path/that/only/works/in/my/notebook")` and use `read_csv("data/my-data.csv")`.
 
-Compared to a single folder with all of your files thrown into, this structure keeps both your files organized with the subdirectories and your code clean with the `R/` folder so you can modularize your code.
-
 ### Intermediate
+Text.
+
 In addition to the files from the previous project level, the "indermediate project level" structure posses a `.gitignore` and a `README.md`.
 
 ```{r}
