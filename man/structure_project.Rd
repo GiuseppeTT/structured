@@ -7,7 +7,8 @@
 structure_project(
   project_path,
   project_level = c("Basic", "Intermediate"),
-  analysis_format = c("Script", "R Markdown (Simplified)", "R Markdown", "Shiny")
+  analysis_format = c("Script", "R Markdown (Simplified)", "R Markdown", "Targets",
+    "Shiny")
 )
 }
 \arguments{
@@ -15,8 +16,8 @@ structure_project(
 
 \item{project_level}{Project level. One of "Basic" or "Intermediate".}
 
-\item{analysis_format}{Analysis format. One of "Script", "R Markdown (Simplified)", "R Markdown" or
-"Shiny".}
+\item{analysis_format}{Analysis format. One of "Script", "R Markdown (Simplified)", "R Markdown",
+"Targets" or "Shiny".}
 }
 \description{
 Create a structured project from a given template.
