@@ -11,7 +11,7 @@
 #' Project level. One of "Basic" or "Intermediate".
 #'
 #' @param analysis_format
-#' Analysis format. One of "Script", "R Markdown", "R Markdown (Structured)" or
+#' Analysis format. One of "Script", "R Markdown (Simplified)", "R Markdown" or
 #' "Shiny".
 #'
 #' @export
@@ -23,8 +23,8 @@ structure_project <- function(
     ),
     analysis_format = c(
         "Script",
+        "R Markdown (Simplified)",
         "R Markdown",
-        "R Markdown (Structured)",
         "Shiny"
     )
 ) {

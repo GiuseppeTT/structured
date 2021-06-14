@@ -35,8 +35,8 @@ get_how_to_run <- function(
     how_to_run <- switch(
         analysis_format,
         "Script" = "run script `analysis.R`",
-        "R Markdown" = "knit document `analysis.Rmd`",
-        "R Markdown (Structured)" = "run script `render.R`",
+        "R Markdown (Simplified)" = "knit document `analysis.Rmd`",
+        "R Markdown" = "run script `render.R`",
         "Shiny" = "run script `app.R`",
         stop("Invalid analysis format")
     )
