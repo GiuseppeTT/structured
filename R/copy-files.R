@@ -36,8 +36,8 @@ copy_analysis_format_structure <- function(
     analysis_format_path <- switch(
         analysis_format,
         "Script" = "script",
+        "R Markdown (Simplified)" = "r-markdown-simplified",
         "R Markdown" = "r-markdown",
-        "R Markdown (Structured)" = "r-markdown-structured",
         "Shiny" = "shiny",
         stop("Invalid analysis format")
     )

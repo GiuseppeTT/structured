@@ -43,8 +43,8 @@ library(structured)
 #
 # analysis_format must be one of:
 # - "Script"
+# - "R Markdown (Simplified)"
 # - "R Markdown"
-# - "R Markdown (Structured)"
 # - "Shiny"
 structure_project(
     project_path = "my-cool-project",

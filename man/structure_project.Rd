@@ -7,7 +7,7 @@
 structure_project(
   project_path,
   project_level = c("Basic", "Intermediate"),
-  analysis_format = c("Script", "R Markdown", "R Markdown (Structured)", "Shiny")
+  analysis_format = c("Script", "R Markdown (Simplified)", "R Markdown", "Shiny")
 )
 }
 \arguments{
@@ -15,7 +15,7 @@ structure_project(
 
 \item{project_level}{Project level. One of "Basic" or "Intermediate".}
 
-\item{analysis_format}{Analysis format. One of "Script", "R Markdown", "R Markdown (Structured)" or
+\item{analysis_format}{Analysis format. One of "Script", "R Markdown (Simplified)", "R Markdown" or
 "Shiny".}
 }
 \description{
