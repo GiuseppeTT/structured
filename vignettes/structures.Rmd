@@ -75,7 +75,7 @@ The purpose of each file/folder is the following:
 - `basic-project.Rproj` (`<project-directory>.Rproj`) RStudio project file. This [article](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) from Jenny Brian and this [chapter](https://r4ds.had.co.nz/workflow-projects.html) from R For Data Science book are great reference. In short, this little guy allows you to break free from all the evil that comes from `setwd("obscure/path/that/only/works/in/my/notebook")` and use `read_csv("data/my-data.csv")`.
 
 ### Intermediate
-Text.
+If the objective of the "basic project level" structure is getting the job done, the objetive of the "intermediate project level" structure is getting the job done and sharable! Even if it means sharing with yourself in six months, which almost count as another person.
 
 In addition to the files from the previous project level, the "indermediate project level" structure posses a `.gitignore` and a `README.md`.
 
