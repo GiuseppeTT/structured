@@ -11,6 +11,7 @@
 Some useful links:
 
 - Documentation: https://giuseppett.github.io/structured
+- Description of structures (project templates): https://giuseppett.github.io/structured/articles/structures.html
 - Example of projects built with `{structured}`: https://github.com/GiuseppeTT/structured-examples
 - GitHub: https://github.com/GiuseppeTT/structured
 
