@@ -33,6 +33,19 @@ test_that("structure_project works", {
     expect_error(iterate_structures(), NA)
 })
 
+test_that("There are no ..gitignore (double dots) files", {
+    iterate_structures(function(project_path, project_level, analysis_format) {
+        dot_dot_gitignore_paths <- fs::dir_ls(
+            project_path,
+            all = TRUE,
+            recurse = TRUE,
+            type = "file",
+            regexp = "\\.\\.gitignore$"
+        )
+        expect_length(dot_dot_gitignore_paths, 0)
+    })
+})
+
 test_that("There are no name template files", {
     iterate_structures(function(project_path, project_level, analysis_format) {
         name_template_files <- fs::dir_ls(
