@@ -52,8 +52,8 @@ get_ignored_files <- function(
     ignored_files <- switch(
         analysis_format,
         "Script" = "",
+        "R Markdown (Simplified)" = "",
         "R Markdown" = "",
-        "R Markdown (Structured)" = "",
         "Targets" = "_targets/",
         "Shiny" = "",
         stop("Invalid analysis format")
