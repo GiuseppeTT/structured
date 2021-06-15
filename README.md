@@ -45,6 +45,7 @@ library(structured)
 # - "Script"
 # - "R Markdown (Simplified)"
 # - "R Markdown"
+# - "Targets"
 # - "Shiny"
 structure_project(
     project_path = "my-cool-project",

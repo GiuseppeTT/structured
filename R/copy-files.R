@@ -38,6 +38,7 @@ copy_analysis_format_structure <- function(
         "Script" = "script",
         "R Markdown (Simplified)" = "r-markdown-simplified",
         "R Markdown" = "r-markdown",
+        "Targets" = "targets",
         "Shiny" = "shiny",
         stop("Invalid analysis format")
     )
