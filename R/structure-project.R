@@ -34,6 +34,7 @@ structure_project <- function(
     fs::dir_create(project_path, recurse = TRUE)
 
     copy_files(project_path, project_level, analysis_format)
+    rename_gitignores(project_path)
     fill_files(project_path, project_level, analysis_format)
     clean_files(project_path)
 }
