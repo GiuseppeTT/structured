@@ -40,7 +40,7 @@ copy_type_structure <- function(
         "R Markdown" = "r-markdown",
         "Targets" = "targets",
         "Shiny" = "shiny",
-        stop("Invalid type")
+        stop("Invalid project type")
     )
     type_path <- fs::path("project-type", type_path)
 

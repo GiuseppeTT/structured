@@ -40,7 +40,7 @@ get_how_to_run <- function(
         "R Markdown" = "run script `render.R`",
         "Targets" = "execute command `targets::tar_make()`",
         "Shiny" = "run script `app.R`",
-        stop("Invalid type")
+        stop("Invalid project type")
     )
 
     return(how_to_run)
@@ -56,7 +56,7 @@ get_ignored_files <- function(
         "R Markdown" = "",
         "Targets" = "_targets/",
         "Shiny" = "",
-        stop("Invalid type")
+        stop("Invalid project type")
     )
 
     return(ignored_files)
