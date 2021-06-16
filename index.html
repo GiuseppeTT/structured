@@ -95,7 +95,7 @@
 <li>In the top bar, click “File” and then “New Project…”</li>
 <li>Select “New Directory”</li>
 <li>Scroll down, select either “Basic Structure Project” or “Intermediate Structure Project”</li>
-<li>Type a name in “Directory name:” for your project folder and select one of the analysis formats in “Analysis Format:”</li>
+<li>Type a name in “Directory name:” for your project folder and select one of the project types in “Project Type:”</li>
 <li>Click “Create Project”</li>
 </ul>
 <p>That’s it! You can start coding now.</p>
@@ -107,22 +107,23 @@
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://giuseppett.github.io/structured">structured</a></span><span class="op">)</span>
 
-<span class="co"># project_path can be either a relative or an absolute path</span>
+<span class="co"># path can be either a relative or an absolute path</span>
 <span class="co">#</span>
-<span class="co"># project_level must be one of:</span>
+<span class="co"># level must be one of:</span>
 <span class="co"># - "Basic"</span>
 <span class="co"># - "Intermediate"</span>
 <span class="co">#</span>
-<span class="co"># analysis_format must be one of:</span>
+<span class="co"># type must be one of:</span>
 <span class="co"># - "Script"</span>
 <span class="co"># - "R Markdown (Simplified)"</span>
 <span class="co"># - "R Markdown"</span>
 <span class="co"># - "Targets"</span>
 <span class="co"># - "Shiny"</span>
+<span class="co"># - "None"</span>
 <span class="fu"><a href="reference/structure_project.html">structure_project</a></span><span class="op">(</span>
-    project_path <span class="op">=</span> <span class="st">"my-cool-project"</span>,
-    project_level <span class="op">=</span> <span class="st">"Basic"</span>,
-    analysis_format <span class="op">=</span> <span class="st">"Script"</span>
+    path <span class="op">=</span> <span class="st">"my-cool-project"</span>,
+    level <span class="op">=</span> <span class="st">"Basic"</span>,
+    type <span class="op">=</span> <span class="st">"Script"</span>
 <span class="op">)</span></code></pre></div>
 <p>That’s it! You can start coding now.</p>
 </div>
