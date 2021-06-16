@@ -47,6 +47,7 @@ library(structured)
 # - "R Markdown"
 # - "Targets"
 # - "Shiny"
+# - "None"
 structure_project(
     path = "my-cool-project",
     level = "Basic",

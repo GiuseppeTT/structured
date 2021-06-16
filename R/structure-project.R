@@ -8,11 +8,11 @@
 #' Path to the new project.
 #'
 #' @param level
-#' Project level. One of "Basic" or "Intermediate".
+#' Project level. One of "Basic" or "Intermediate". Default to "Basic".
 #'
 #' @param type
 #' Project type. One of "Script", "R Markdown (Simplified)", "R Markdown",
-#' "Targets" or "Shiny".
+#' "Targets", "Shiny" or "None". Default to "Script".
 #'
 #' @export
 structure_project <- function(
@@ -26,7 +26,8 @@ structure_project <- function(
         "R Markdown (Simplified)",
         "R Markdown",
         "Targets",
-        "Shiny"
+        "Shiny",
+        "None"
     )
 ) {
     level <- match.arg(level)
