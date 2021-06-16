@@ -49,13 +49,13 @@ library(structured)
 ### Basic
 The "basic project level" structure is simple, minimal, but complete enough to accomodate all the analysis formats. In other words, a perfect starting point for newbies and an excelent use for quick and simple projects.
 
-Except for the `analysis.R` file^[The `analysis.R` file comes from the "script analysis format", which is the default analysis format value. It is included because `structure_project()` needs both `project_level` and `analysis_format` supplied.], the structure is composed of the following files:
+The structure is composed of the following files:
 
 ```{r}
 structure_project(
     "basic-project",
-    project_level = "Basic",
-    analysis_format = "Script"
+    level = "Basic",
+    type = "None"
 )
 dir_tree("basic-project", all = TRUE)
 ```
@@ -82,8 +82,8 @@ In addition to the files from the previous project level, the "indermediate proj
 ```{r}
 structure_project(
     "intermediate-project",
-    project_level = "Intermediate",
-    analysis_format = "Script"
+    level = "Intermediate",
+    type = "None"
 )
 dir_tree("intermediate-project", all = TRUE)
 ```
@@ -101,10 +101,22 @@ Text.
 ```{r}
 structure_project(
     "script-project",
-    project_level = "Basic",
-    analysis_format = "Script"
+    level = "Basic",
+    type = "Script"
 )
 dir_tree("script-project", all = TRUE)
+```
+
+### R Markdown (Simplified)
+Text.
+
+```{r}
+structure_project(
+    "r-markdown-simplified-project",
+    level = "Basic",
+    type = "R Markdown (Simplified)"
+)
+dir_tree("r-markdown-simplified-project", all = TRUE)
 ```
 
 ### R Markdown
@@ -113,22 +125,22 @@ Text.
 ```{r}
 structure_project(
     "r-markdown-project",
-    project_level = "Basic",
-    analysis_format = "R Markdown"
+    level = "Basic",
+    type = "R Markdown"
 )
 dir_tree("r-markdown-project", all = TRUE)
 ```
 
-### R Markdown (Structured)
+### Targets
 Text.
 
 ```{r}
 structure_project(
-    "r-markdown-structured-project",
-    project_level = "Basic",
-    analysis_format = "R Markdown (Structured)"
+    "targets-project",
+    level = "Basic",
+    type = "Targets"
 )
-dir_tree("r-markdown-structured-project", all = TRUE)
+dir_tree("targets-project", all = TRUE)
 ```
 
 ### Shiny
@@ -137,8 +149,8 @@ Text.
 ```{r}
 structure_project(
     "shiny-project",
-    project_level = "Basic",
-    analysis_format = "Shiny"
+    level = "Basic",
+    type = "Shiny"
 )
 dir_tree("shiny-project", all = TRUE)
 ```
