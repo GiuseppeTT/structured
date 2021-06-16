@@ -11,7 +11,7 @@ copy_files <- function(
 copy_base_structure <- function(
     path
 ) {
-    copy_structure(path, "base")
+    copy_structure(path, "project-base")
 }
 
 copy_level_structure <- function(
@@ -42,7 +42,7 @@ copy_type_structure <- function(
         "Shiny" = "shiny",
         stop("Invalid type")
     )
-    type_path <- fs::path("analysis-format", type_path)
+    type_path <- fs::path("project-type", type_path)
 
     copy_structure(path, type_path)
 }
