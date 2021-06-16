@@ -1,9 +1,9 @@
 Binding: .structure_basic_project
 Title: Basic Structured Project
 
-Parameter: analysis_format
+Parameter: type
 Widget: SelectInput
-Label: Analysis Format
+Label: Project Type
 Fields: Script, R Markdown (Simplified), R Markdown, Targets, Shiny
 Default: Script
 Position: Left

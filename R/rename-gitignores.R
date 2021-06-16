@@ -1,10 +1,10 @@
 rename_gitignores <- function(
-    project_path
+    path
 ) {
     # .gitignore files are not installed along with the other files, so we name
     # them ..gitignore (double dots) and later rename to .gitignore
     gitignore_paths <- fs::dir_ls(
-        project_path,
+        path,
         all = TRUE,
         recurse = TRUE,
         type = "file",

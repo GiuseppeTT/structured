@@ -24,7 +24,7 @@ Follow these steps:
 - In the top bar, click "File" and then "New Project..."
 - Select "New Directory"
 - Scroll down, select either "Basic Structure Project" or "Intermediate Structure Project"
-- Type a name in "Directory name:" for your project folder and select one of the analysis formats in "Analysis Format:"
+- Type a name in "Directory name:" for your project folder and select one of the project types in "Project Type:"
 - Click "Create Project"
 
 That's it! You can start coding now.
@@ -35,22 +35,22 @@ That's it! You can start coding now.
 ```r
 library(structured)
 
-# project_path can be either a relative or an absolute path
+# path can be either a relative or an absolute path
 #
-# project_level must be one of:
+# level must be one of:
 # - "Basic"
 # - "Intermediate"
 #
-# analysis_format must be one of:
+# type must be one of:
 # - "Script"
 # - "R Markdown (Simplified)"
 # - "R Markdown"
 # - "Targets"
 # - "Shiny"
 structure_project(
-    project_path = "my-cool-project",
-    project_level = "Basic",
-    analysis_format = "Script"
+    path = "my-cool-project",
+    level = "Basic",
+    type = "Script"
 )
 ```
 

@@ -1,58 +1,58 @@
 copy_files <- function(
-    project_path,
-    project_level,
-    analysis_format
+    path,
+    level,
+    type
 ) {
-    copy_base_structure(project_path)
-    copy_project_level_structure(project_path, project_level)
-    copy_analysis_format_structure(project_path, analysis_format)
+    copy_base_structure(path)
+    copy_level_structure(path, level)
+    copy_type_structure(path, type)
 }
 
 copy_base_structure <- function(
-    project_path
+    path
 ) {
-    copy_structure(project_path, "base")
+    copy_structure(path, "base")
 }
 
-copy_project_level_structure <- function(
-    project_path,
-    project_level
+copy_level_structure <- function(
+    path,
+    level
 ) {
-    project_level_path <- switch(
-        project_level,
+    level_path <- switch(
+        level,
         "Basic" = "basic",
         "Intermediate" = "intermediate",
         stop("Invalid project level")
     )
-    project_level_path <- fs::path("project-level", project_level_path)
+    level_path <- fs::path("project-level", level_path)
 
-    copy_structure(project_path, project_level_path)
+    copy_structure(path, level_path)
 }
 
-copy_analysis_format_structure <- function(
-    project_path,
-    analysis_format
+copy_type_structure <- function(
+    path,
+    type
 ) {
-    analysis_format_path <- switch(
-        analysis_format,
+    type_path <- switch(
+        type,
         "Script" = "script",
         "R Markdown (Simplified)" = "r-markdown-simplified",
         "R Markdown" = "r-markdown",
         "Targets" = "targets",
         "Shiny" = "shiny",
-        stop("Invalid analysis format")
+        stop("Invalid type")
     )
-    analysis_format_path <- fs::path("analysis-format", analysis_format_path)
+    type_path <- fs::path("analysis-format", type_path)
 
-    copy_structure(project_path, analysis_format_path)
+    copy_structure(path, type_path)
 }
 
 copy_structure <- function(
-    project_path,
+    path,
     structure_name
 ) {
     structure_root <- fs::path_package("structured", "structure")
     structure_path <- fs::path(structure_root, structure_name, "/.")
 
-    fs::dir_copy(structure_path, project_path)
+    fs::dir_copy(structure_path, path)
 }

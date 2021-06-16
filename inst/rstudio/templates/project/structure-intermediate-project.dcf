@@ -2,9 +2,9 @@ Binding: .structure_intermediate_project
 Title: Intermediate Structured Project
 OpenFiles: README.md
 
-Parameter: analysis_format
+Parameter: type
 Widget: SelectInput
-Label: Analysis Format
+Label: Project Type
 Fields: Script, R Markdown (Simplified), R Markdown, Targets, Shiny
 Default: Script
 Position: Left

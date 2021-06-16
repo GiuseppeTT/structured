@@ -1,14 +1,14 @@
 clean_files <- function(
-    project_path
+    path
 ) {
-    delete_gitkeeps(project_path)
+    delete_gitkeeps(path)
 }
 
 delete_gitkeeps <- function(
-    project_path
+    path
 ) {
     gitkeep_paths <- fs::dir_ls(
-        project_path,
+        path,
         all = TRUE,
         recurse = TRUE,
         type = "file",

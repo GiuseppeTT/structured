@@ -6,8 +6,8 @@
 
     structure_project(
         path,
-        project_level = "Basic",
-        analysis_format = dots$analysis_format
+        level = "Basic",
+        type = dots$type
     )
 }
 
@@ -19,7 +19,7 @@
 
     structure_project(
         path,
-        project_level = "Intermediate",
-        analysis_format = dots$analysis_format
+        level = "Intermediate",
+        type = dots$type
     )
 }
