@@ -1,20 +1,20 @@
 fill_files <- function(
-    project_path,
-    project_level,
-    analysis_format
+    path,
+    level,
+    type
 ) {
-    variables <- define_variables(project_path, project_level, analysis_format)
+    variables <- define_variables(path, level, type)
 
-    fill_file_names(project_path, variables)
-    fill_file_contents(project_path, variables)
+    fill_file_names(path, variables)
+    fill_file_contents(path, variables)
 }
 
 fill_file_names <- function(
-    project_path,
+    path,
     variables
 ) {
     project_files <- fs::dir_ls(
-        project_path,
+        path,
         all = TRUE,
         recurse = TRUE,
         type = "file"
@@ -24,11 +24,11 @@ fill_file_names <- function(
 }
 
 fill_file_contents <- function(
-    project_path,
+    path,
     variables
 ) {
     project_files <- fs::dir_ls(
-        project_path,
+        path,
         all = TRUE,
         recurse = TRUE,
         type = "file"

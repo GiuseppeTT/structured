@@ -15,16 +15,16 @@ get_argument <- function(
 iterate_structures <- function(
     expectation_function = function(...) expect_true(TRUE)
 ) {
-    project_levels <- get_argument(structure_project, "project_level")
-    analysis_formats <- get_argument(structure_project, "analysis_format")
+    levels <- get_argument(structure_project, "level")
+    types <- get_argument(structure_project, "type")
 
-    for (project_level in project_levels) {
-        for (analysis_format in analysis_formats) {
+    for (level in levels) {
+        for (type in types) {
             local_test_directory()
 
-            project_path <- fs::path("my-project")
-            structure_project(project_path, project_level, analysis_format)
-            expectation_function(project_path, project_level, analysis_format)
+            path <- fs::path("my-project")
+            structure_project(path, level, type)
+            expectation_function(path, level, type)
         }
     }
 }
@@ -34,9 +34,9 @@ test_that("structure_project works", {
 })
 
 test_that("There are no ..gitignore (double dots) files", {
-    iterate_structures(function(project_path, project_level, analysis_format) {
+    iterate_structures(function(path, level, type) {
         dot_dot_gitignore_paths <- fs::dir_ls(
-            project_path,
+            path,
             all = TRUE,
             recurse = TRUE,
             type = "file",
@@ -47,9 +47,9 @@ test_that("There are no ..gitignore (double dots) files", {
 })
 
 test_that("There are no name template files", {
-    iterate_structures(function(project_path, project_level, analysis_format) {
+    iterate_structures(function(path, level, type) {
         name_template_files <- fs::dir_ls(
-            project_path,
+            path,
             all = TRUE,
             recurse = TRUE,
             type = "file",
@@ -60,9 +60,9 @@ test_that("There are no name template files", {
 })
 
 test_that("There are no content template files", {
-    iterate_structures(function(project_path, project_level, analysis_format) {
+    iterate_structures(function(path, level, type) {
         fs::dir_map(
-            project_path,
+            path,
             fun = function(file_path) {
                 file_content <- read_file(file_path)
                 template_matches <- grep("\\{\\{.*\\}\\}", file_content)
@@ -76,9 +76,9 @@ test_that("There are no content template files", {
 })
 
 test_that("There are no .gitkeep files", {
-    iterate_structures(function(project_path, project_level, analysis_format) {
+    iterate_structures(function(path, level, type) {
         gitkeep_paths <- fs::dir_ls(
-            project_path,
+            path,
             all = TRUE,
             recurse = TRUE,
             type = "file",

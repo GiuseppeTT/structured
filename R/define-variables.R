@@ -1,62 +1,64 @@
 define_variables <- function(
-    project_path,
-    project_level,
-    analysis_format
+    path,
+    level,
+    type
 ) {
     variables <- list(
-        project_slug = get_project_slug(project_path),
-        project_name = get_project_name(project_path),
-        how_to_run = get_how_to_run(analysis_format),
-        ignored_files = get_ignored_files(analysis_format)
+        project_slug = get_project_slug(path),
+        project_name = get_project_name(path),
+        how_to_run = get_how_to_run(type),
+        ignored_files = get_ignored_files(type)
     )
 
     return(variables)
 }
 
 get_project_slug <- function(
-    project_path
+    path
 ) {
-    project_slug <- fs::path_file(project_path)
+    project_slug <- fs::path_file(path)
 
     return(project_slug)
 }
 
 get_project_name <- function(
-    project_path
+    path
 ) {
-    project_slug <- get_project_slug(project_path)
+    project_slug <- get_project_slug(path)
     project_name <- gsub("[-_]", " ", project_slug)
 
     return(project_name)
 }
 
 get_how_to_run <- function(
-    analysis_format
+    type
 ) {
     how_to_run <- switch(
-        analysis_format,
+        type,
         "Script" = "run script `analysis.R`",
         "R Markdown (Simplified)" = "knit document `analysis.Rmd`",
         "R Markdown" = "run script `render.R`",
         "Targets" = "execute command `targets::tar_make()`",
         "Shiny" = "run script `app.R`",
-        stop("Invalid analysis format")
+        "None" = "..",
+        stop("Invalid project type")
     )
 
     return(how_to_run)
 }
 
 get_ignored_files <- function(
-    analysis_format
+    type
 ) {
     ignored_files <- switch(
-        analysis_format,
+        type,
         "Script" = "",
         "R Markdown (Simplified)" = "",
         "R Markdown" = "",
         "Targets" = "_targets/",
         "Shiny" = "",
-        stop("Invalid analysis format")
+        "None" = "",
+        stop("Invalid project type")
     )
 
     return(ignored_files)

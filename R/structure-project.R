@@ -4,38 +4,44 @@
 #' @description
 #' Create a structured project from a given template.
 #'
-#' @param project_path
+#' @param path
 #' Path to the new project.
 #'
-#' @param project_level
-#' Project level. One of "Basic" or "Intermediate".
+#' @param level
+#' Project level. One of "Basic" or "Intermediate". Default to "Basic".
 #'
-#' @param analysis_format
-#' Analysis format. One of "Script", "R Markdown (Simplified)", "R Markdown",
-#' "Targets" or "Shiny".
+#' @param type
+#' Project type. One of "Script", "R Markdown (Simplified)", "R Markdown",
+#' "Targets", "Shiny" or "None". Default to "Script".
+#'
+#' @examples
+#' \dontrun{
+#' structure_project("my-cool-project", level = "Basic", type = "Script")
+#' }
 #'
 #' @export
 structure_project <- function(
-    project_path,
-    project_level = c(
+    path,
+    level = c(
         "Basic",
         "Intermediate"
     ),
-    analysis_format = c(
+    type = c(
         "Script",
         "R Markdown (Simplified)",
         "R Markdown",
         "Targets",
-        "Shiny"
+        "Shiny",
+        "None"
     )
 ) {
-    project_level <- match.arg(project_level)
-    analysis_format <- match.arg(analysis_format)
+    level <- match.arg(level)
+    type <- match.arg(type)
 
-    fs::dir_create(project_path, recurse = TRUE)
+    fs::dir_create(path, recurse = TRUE)
 
-    copy_files(project_path, project_level, analysis_format)
-    rename_gitignores(project_path)
-    fill_files(project_path, project_level, analysis_format)
-    clean_files(project_path)
+    copy_files(path, level, type)
+    rename_gitignores(path)
+    fill_files(path, level, type)
+    clean_files(path)
 }

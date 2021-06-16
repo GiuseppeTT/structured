@@ -5,20 +5,26 @@
 \title{Create a structured project}
 \usage{
 structure_project(
-  project_path,
-  project_level = c("Basic", "Intermediate"),
-  analysis_format = c("Script", "R Markdown (Simplified)", "R Markdown", "Targets",
-    "Shiny")
+  path,
+  level = c("Basic", "Intermediate"),
+  type = c("Script", "R Markdown (Simplified)", "R Markdown", "Targets", "Shiny",
+    "None")
 )
 }
 \arguments{
-\item{project_path}{Path to the new project.}
+\item{path}{Path to the new project.}
 
-\item{project_level}{Project level. One of "Basic" or "Intermediate".}
+\item{level}{Project level. One of "Basic" or "Intermediate". Default to "Basic".}
 
-\item{analysis_format}{Analysis format. One of "Script", "R Markdown (Simplified)", "R Markdown",
-"Targets" or "Shiny".}
+\item{type}{Project type. One of "Script", "R Markdown (Simplified)", "R Markdown",
+"Targets", "Shiny" or "None". Default to "Script".}
 }
 \description{
 Create a structured project from a given template.
+}
+\examples{
+\dontrun{
+structure_project("my-cool-project", level = "Basic", type = "Script")
+}
+
 }
