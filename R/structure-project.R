@@ -14,6 +14,11 @@
 #' Project type. One of "Script", "R Markdown (Simplified)", "R Markdown",
 #' "Targets", "Shiny" or "None". Default to "Script".
 #'
+#' @examples
+#' \dontrun{
+#' structure_project("my-cool-project", level = "Basic", type = "Script")
+#' }
+#'
 #' @export
 structure_project <- function(
     path,
