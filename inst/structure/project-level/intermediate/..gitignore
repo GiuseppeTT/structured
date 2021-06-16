@@ -1,5 +1,4 @@
 .DS_Store
 .Rdata
 .Rhistory
-.Rproj.user/
-{{ignored_files}}
+.Rproj.user/{{ignored_files}}
