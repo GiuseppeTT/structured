@@ -40,7 +40,7 @@ get_how_to_run <- function(
         "R Markdown" = "run script `render.R`",
         "Targets" = "execute command `targets::tar_make()`",
         "Shiny" = "run script `app.R`",
-        "None" = "...",
+        "None" = "..",
         stop("Invalid project type")
     )
 
