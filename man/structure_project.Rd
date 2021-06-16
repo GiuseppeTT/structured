@@ -7,16 +7,17 @@
 structure_project(
   path,
   level = c("Basic", "Intermediate"),
-  type = c("Script", "R Markdown (Simplified)", "R Markdown", "Targets", "Shiny")
+  type = c("Script", "R Markdown (Simplified)", "R Markdown", "Targets", "Shiny",
+    "None")
 )
 }
 \arguments{
 \item{path}{Path to the new project.}
 
-\item{level}{Project level. One of "Basic" or "Intermediate".}
+\item{level}{Project level. One of "Basic" or "Intermediate". Default to "Basic".}
 
 \item{type}{Project type. One of "Script", "R Markdown (Simplified)", "R Markdown",
-"Targets" or "Shiny".}
+"Targets", "Shiny" or "None". Default to "Script".}
 }
 \description{
 Create a structured project from a given template.
