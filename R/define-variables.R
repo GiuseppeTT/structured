@@ -61,7 +61,7 @@ get_ignored_files <- function(
         stop("Invalid project type")
     )
 
-    ignored_files <- paste0("\\n", ignored_files)
+    ignored_files <- paste0("\n", ignored_files)
 
     return(ignored_files)
 }
