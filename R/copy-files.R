@@ -55,5 +55,5 @@ copy_structure <- function(
     structure_root <- fs::path_package("structured", "structure")
     structure_path <- fs::path(structure_root, structure_name, "/.")
 
-    fs::dir_copy(structure_path, path)
+    fs::dir_copy(structure_path, path, overwrite = TRUE)
 }
