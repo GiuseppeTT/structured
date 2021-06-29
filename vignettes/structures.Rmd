@@ -47,7 +47,7 @@ library(structured)
 
 ## Project level
 ### Basic
-The "basic project level" structure is simple, minimal, but complete enough to accomodate all the project types. In other words, it is a perfect starting point for newbies and an excelent use for quick and simple projects.
+The "basic" project level is simple, minimal, but complete enough to accomodate all the project types. In other words, it is a perfect starting point for newbies and an excelent use for quick and simple projects.
 
 The structure is composed of the following files:
 
@@ -75,9 +75,9 @@ The purpose of each file/folder is the following:
 - `basic-project.Rproj` (`<project directory name>.Rproj`) RStudio project file. The [Project-oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) article and the [Workflow: projects](https://r4ds.had.co.nz/workflow-projects.html) chapter are great reference. In short, this little guy allows you to break free from all the evil that comes from `setwd("path/that/only/works/on/my/computer")` and use `read_csv("data/my-data.csv")` directly.
 
 ### Intermediate
-If the objective of the "basic project level" structure is getting the job done, the objetive of the "intermediate project level" structure is getting the job done and sharable. Even if it means sharing with yourself six months in the future.
+If the objective of the "basic" project level is getting the job done, the objetive of the "intermediate" project level is getting the job done and sharable. Even if it means sharing with yourself six months in the future.
 
-In addition to the files from the previous project level, the "indermediate project level" structure posses a `README.md` and a `.gitignore`.
+In addition to the files from the previous project level, the "indermediate" project level posses a `README.md` and a `.gitignore`.
 
 ```{r}
 structure_project(
@@ -96,9 +96,9 @@ The purpose of the additional file/folders are the following:
 
 ## Project type
 ### Script
-The script project type is the most direct approach
+The "script" project type is the most direct approach
 
-The script project type simply adds a `analysis.R` script to the rest of the structure:
+It simply adds an `analysis.R` script to the rest of the structure:
 
 ```{r}
 structure_project(
