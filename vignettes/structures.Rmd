@@ -28,9 +28,9 @@ old_hooks <- fansi::set_knit_hooks(
 )
 ```
 
-`structured` revolves around the concept of strucures, which is a fancy name for project templates. Well, strongly *structured* templates. So, it is essential to understand those structures to select the most adequate for your project.
+`{structured}` revolves around the concept of strucures, which is a fancy name for project templates. Well, strongly *structured* templates. So, it is essential to understand those structures to select the most adequate for your project.
 
-Project is a means to an end. Be it analyzing a dataset for a class project or creating a dashboard for a business. `structured` defines projects by a combination of two values. The first is **project level** and determines the **complexity** of your project^[We should always aim for the simplest solution, but sometimes complexity is unavoidable.]. The second is **project type** and specifies **how** your project will solve the problem. The next sections give more details about each option those values can assume.
+Project is a means to an end. Be it analyzing a dataset for a class project or creating a dashboard for a business. `{structured}` defines projects by a combination of two values. The first is **project level** and determines the **complexity** of your project^[We should always aim for the simplest solution, but sometimes complexity is unavoidable.]. The second is **project type** and specifies **how** your project will solve the problem. The next sections give more details about each option those values can assume.
 
 Before we start, it is important to load some packages.
 
@@ -68,11 +68,11 @@ The purpose of each file/folder is the following:
 
 - `extra/` Save any file that is not data, output or code but is related to the project. Some cases are professor instructions about the class project and meeting notes.
 
-- `R/` Save auxiliar R files. That is, files that are not run directly. Some examples are `ui.R` and `server.R`, which are used by the shiny package.
+- `R/` Save auxiliar R files. That is, files that are not run directly. Some examples are `ui.R` and `server.R`, which are used by the `{shiny}` package.
 
-- `R/functions.R` Write your R functions used in the rest of the project. This helps keeping your code more organized, similar to the effect of adding subfolder such as `data/` to organize your files.
+- `R/functions.R` Write your R functions used in the rest of the project. This helps keeping your code clean, similar to the effect of adding subfolder such as `data/` to organize your files.
 
-- `basic-project.Rproj` (`<project-directory>.Rproj`) RStudio project file. This [article](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) from Jenny Brian and this [chapter](https://r4ds.had.co.nz/workflow-projects.html) from R For Data Science book are great reference. In short, this little guy allows you to break free from all the evil that comes from `setwd("obscure/path/that/only/works/in/my/computer")` and use `read_csv("data/my-data.csv")` directly.
+- `basic-project.Rproj` (`<project directory name>.Rproj`) RStudio project file. The [Project-oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) article and the [Workflow: projects](https://r4ds.had.co.nz/workflow-projects.html) chapter are great reference. In short, this little guy allows you to break free from all the evil that comes from `setwd("path/that/only/works/on/my/computer")` and use `read_csv("data/my-data.csv")` directly.
 
 ### Intermediate
 If the objective of the "basic project level" structure is getting the job done, the objetive of the "intermediate project level" structure is getting the job done and sharable. Even if it means sharing with yourself six months in the future.
@@ -88,15 +88,17 @@ structure_project(
 dir_tree("intermediate-project", all = TRUE)
 ```
 
-The purpose of the additional file/folders is the following:
+The purpose of the additional file/folders are the following:
 
 - `README.md` Write must read instructions about your project. Some useful topics are a quick description of what the project is about and steps on how to run it.
 
-- `.gitignore` This file represents more than its funcitonality. The idea here is that you use [git](https://git-scm.com/) to version control your project. This way you will never be afraid again of changing one line and breaking everything. Plus, you can easily share your work on [GitHub](github.com/). [Happy Git With R](https://happygitwithr.com/) notes from Janny Brian and the [Git and Github](https://r-pkgs.org/git.html) chapter of the R Packages book are great resources to learn git for R users.
+- `.gitignore` This file represents more than its funcitonality. The idea here is that you use [git](https://git-scm.com/) to version control your project. This way you will never be afraid again of changing one line and breaking everything. Plus, you can easily share your work on [GitHub](github.com/). The [Happy Git With R](https://happygitwithr.com/) notes and the [Git and Github](https://r-pkgs.org/git.html) chapter are great resources to learn git for R users.
 
 ## Project type
 ### Script
-Text.
+The script project type is the most direct approach
+
+The script project type simply adds a `analysis.R` script to the rest of the structure:
 
 ```{r}
 structure_project(
@@ -106,6 +108,10 @@ structure_project(
 )
 dir_tree("script-project", all = TRUE)
 ```
+
+The purpose of the additional file/folders is the following:
+
+- `analysis.R` BLAH
 
 ### R Markdown (Simplified)
 Text.
