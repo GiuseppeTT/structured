@@ -20,6 +20,7 @@ Imports:
     rstudioapi
 Suggests:
     devtools,
+    fansi,
     knitr,
     lintr,
     pkgdown,
