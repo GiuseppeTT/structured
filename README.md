@@ -49,8 +49,8 @@ library(structured)
 # - "Shiny"
 # - "None"
 #
-# if open is TRUE and you are on RStudio, open the project in a new session.
-# Else, do nothing.
+# if open is TRUE, open the project (if on RStudio) or simply set the working
+# directory (if not on RStudio). Else, do nothing.
 structure_project(
     path = "my-cool-project",
     level = "Basic",
