@@ -16,7 +16,8 @@ URL: https://giuseppett.github.io/structured,
 BugReports: https://github.com/GiuseppeTT/structured/issues
 Imports:
     fs,
-    glue
+    glue,
+    rstudioapi
 Suggests:
     devtools,
     lintr,

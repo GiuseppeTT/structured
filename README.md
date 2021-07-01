@@ -48,10 +48,14 @@ library(structured)
 # - "Targets"
 # - "Shiny"
 # - "None"
+#
+# if open is TRUE and you are on RStudio, open the project in a new session.
+# Else, do nothing.
 structure_project(
     path = "my-cool-project",
     level = "Basic",
-    type = "Script"
+    type = "Script",
+    open = TRUE
 )
 ```
 

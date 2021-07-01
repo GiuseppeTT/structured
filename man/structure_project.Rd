@@ -8,7 +8,8 @@ structure_project(
   path,
   level = c("Basic", "Intermediate"),
   type = c("Script", "R Markdown (Simplified)", "R Markdown", "Targets", "Shiny",
-    "None")
+    "None"),
+  open = FALSE
 )
 }
 \arguments{
@@ -18,6 +19,10 @@ structure_project(
 
 \item{type}{Project type. One of "Script", "R Markdown (Simplified)", "R Markdown",
 "Targets", "Shiny" or "None". Default to "Script".}
+
+\item{open}{Open option. If TRUE and on RStudio open the project in a new session, if
+TRUE and not on RStudio just set the working directory to the new project
+directory. If FALSE (default) do nothing.}
 }
 \description{
 Create a structured project from a given template.

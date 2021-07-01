@@ -14,6 +14,11 @@
 #' Project type. One of "Script", "R Markdown (Simplified)", "R Markdown",
 #' "Targets", "Shiny" or "None". Default to "Script".
 #'
+#' @param open
+#' Open option. If TRUE and on RStudio open the project in a new session, if
+#' TRUE and not on RStudio just set the working directory to the new project
+#' directory. If FALSE (default) do nothing.
+#'
 #' @examples
 #' \dontrun{
 #' structure_project("my-cool-project", level = "Basic", type = "Script")
@@ -33,7 +38,8 @@ structure_project <- function(
         "Targets",
         "Shiny",
         "None"
-    )
+    ),
+    open = FALSE
 ) {
     level <- match.arg(level)
     type <- match.arg(type)
@@ -44,4 +50,7 @@ structure_project <- function(
     rename_gitignores(path)
     fill_files(path, level, type)
     clean_files(path)
+
+    if (open)
+        open_project(path)
 }
