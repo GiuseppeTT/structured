@@ -19,6 +19,9 @@
 #' `TRUE` and not on RStudio just set the working directory to the new project
 #' directory. If `FALSE` (default) do nothing.
 #'
+#' @return
+#' Return the project path invisibly.
+#'
 #' @examples
 #' \dontrun{
 #' structure_project("my-cool-project", level = "Basic", type = "Script")
@@ -53,4 +56,6 @@ structure_project <- function(
 
     if (open)
         open_project(path)
+
+    return(invisible(path))
 }

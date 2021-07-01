@@ -24,6 +24,9 @@ structure_project(
 \code{TRUE} and not on RStudio just set the working directory to the new project
 directory. If \code{FALSE} (default) do nothing.}
 }
+\value{
+Return the project path invisibly.
+}
 \description{
 Create a structured project from a given template.
 }
