@@ -77,7 +77,7 @@ The purpose of each file/folder is the following:
 ### Intermediate
 If the objective of the "basic" project level is getting the job done, the objetive of the "intermediate" project level is getting the job done and sharable. Even if it means sharing with yourself six months in the future.
 
-In addition to the files from the previous project level, the "indermediate" project level posses a `README.md` and a `.gitignore`.
+The structure is composed of the following files:
 
 ```{r}
 structure_project(
@@ -96,9 +96,9 @@ The purpose of the additional file/folders are the following:
 
 ## Project type
 ### Script
-The "script" project type is the most direct approach
+The "script" project type is the most direct approach. You simply code your analysis in a script, run it and its done. The product files should be available in `output/`.
 
-It simply adds an `analysis.R` script to the rest of the structure:
+Using the "basic" project level, the structure is composed of the following files:
 
 ```{r}
 structure_project(
@@ -111,10 +111,12 @@ dir_tree("script-project", all = TRUE)
 
 The purpose of the additional file/folders is the following:
 
-- `analysis.R` BLAH
+- `analysis.R` Code your analysis. Some common steps are reading data, cleaning data, computing statistics and plotting.
 
 ### R Markdown (Simplified)
-Text.
+The "R markdown (simplified)" project is designed for easily creating documents from R Markdown files. Just use the *knit* button in your RStudio window to render the Rmd document and copy the generated document to `output/` folder.
+
+Using the "basic" project level, the structure is composed of the following files:
 
 ```{r}
 structure_project(
@@ -125,8 +127,15 @@ structure_project(
 dir_tree("r-markdown-simplified-project", all = TRUE)
 ```
 
+The purpose of the additional file/folders is the following:
+
+- `analysis.Rmd` Write and code your analysis. Some common sections are database description (read data), results (compute statistics) and conclusion.
+
 ### R Markdown
-Text.
+
+The "R markdown" project type offers a more programmatic approach to the "R markdown (simplified)" project type. The idea here is to run a script that will automatically render all R Markdown documents and move them to the `output/` folder
+
+Using the "basic" project level, the structure is composed of the following files:
 
 ```{r}
 structure_project(
@@ -137,8 +146,18 @@ structure_project(
 dir_tree("r-markdown-project", all = TRUE)
 ```
 
+The purpose of the additional file/folders is the following:
+
+- `Rmd/` Save any R Markdown file.
+- `analysis.Rmd` Write and code your analysis. Some common sections are database description (read data), results (compute statistics) and conclusion.
+- `render.R` You do not have to do anything as this script will come automatically configured. Just run it to render the R Markdown files.
+
+If you want to use the knit button in this structure, you need to configure the knit directory to the project directory. You can do that by clicking "Knit" -> "Knit Directory" -> "Project Directory".
+
 ### Targets
-Text.
+The "targets" project type is specially useful for big and slow to run analysis. The idea here is to leverage the `{targets}` package organize your analysis code even more and run only the necessary parts when changing the code.
+
+Using the "basic" project level, the structure is composed of the following files:
 
 ```{r}
 structure_project(
@@ -149,8 +168,14 @@ structure_project(
 dir_tree("targets-project", all = TRUE)
 ```
 
+The purpose of the additional file/folders is the following:
+
+- `_targets.R` BLAH. [targets](https://github.com/ropensci/targets) documentation is great reference.
+
 ### Shiny
-Text.
+The "targets" project type BLAH.
+
+Using the "basic" project level, the structure is composed of the following files:
 
 ```{r}
 structure_project(
@@ -161,8 +186,14 @@ structure_project(
 dir_tree("shiny-project", all = TRUE)
 ```
 
+The purpose of the additional file/folders is the following:
+
+- `BLAH` BLAH
+
 ### None
 Text.
+
+Using the "basic" project level, the structure is composed of the following files:
 
 ```{r}
 structure_project(
@@ -172,3 +203,7 @@ structure_project(
 )
 dir_tree("none-project", all = TRUE)
 ```
+
+## Extensions
+
+Blah blah, you may want to add `clean.R`, `data/raw`, `presentation.Rmd`, etc.
