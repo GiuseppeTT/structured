@@ -15,9 +15,9 @@
 #' "Targets", "Shiny" or "None". Default to "Script".
 #'
 #' @param open
-#' Open option. If TRUE and on RStudio open the project in a new session, if
-#' TRUE and not on RStudio just set the working directory to the new project
-#' directory. If FALSE (default) do nothing.
+#' Open option. If `TRUE` and on RStudio open the project in a new session, if
+#' `TRUE` and not on RStudio just set the working directory to the new project
+#' directory. If `FALSE` (default) do nothing.
 #'
 #' @examples
 #' \dontrun{
