@@ -149,7 +149,7 @@ dir_tree("r-markdown-project", all = TRUE)
 The purpose of the additional file/folders is the following:
 
 - `Rmd/` Save any R Markdown file.
-- `analysis.Rmd` Write and code your analysis. Some common sections are database description (read data), results (compute statistics) and conclusion.
+- `Rmd/analysis.Rmd` Write and code your analysis. Some common sections are database description (read data), results (compute statistics) and conclusion.
 - `render.R` You do not have to do anything as this script will come automatically configured. Just run it to render the R Markdown files.
 
 If you want to use the knit button in this structure, you need to configure the knit directory to the project directory. You can do that by clicking "Knit" -> "Knit Directory" -> "Project Directory".
