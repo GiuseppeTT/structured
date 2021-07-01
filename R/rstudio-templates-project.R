@@ -4,10 +4,12 @@
 ) {
     dots <- list(...)
 
+    # RStudio project template feature opens using another mechanism
     structure_project(
         path,
         level = "Basic",
-        type = dots$type
+        type = dots$type,
+        open = FALSE
     )
 }
 
@@ -17,9 +19,11 @@
 ) {
     dots <- list(...)
 
+    # RStudio project template feature opens using another mechanism
     structure_project(
         path,
         level = "Intermediate",
-        type = dots$type
+        type = dots$type,
+        open = FALSE
     )
 }
