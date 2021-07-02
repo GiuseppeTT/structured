@@ -5,7 +5,7 @@ test_that("read_file works", {
     content <- read_file(path)
 
     if (.Platform$OS.type == "windows")
-        expect_equal(content, "123\n\r{{test}}\n\r")
+        expect_equal(content, "123\rzn{{test}}\rzn")
     else
         expect_equal(content, "123\n{{test}}\n")
 })
@@ -29,7 +29,7 @@ test_that("write_file works", {
     read_content <- read_file(path)
 
     if (.Platform$OS.type == "windows")
-        expect_equal(read_content, "test\n\r123\n\r")
+        expect_equal(read_content, "test\rzn123\rzn")
     else
         expect_equal(read_content, "test\n123\n")
 })
