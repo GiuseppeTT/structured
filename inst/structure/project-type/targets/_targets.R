@@ -10,8 +10,8 @@ source("R/functions.R")
 
 # Define analysis targets ------------------------------------------------------
 list(
-  tar_target(
-      complex_algebra,
-      1 + 1
-  )
+    tar_target(
+        complex_algebra,
+        1 + 1
+    )
 )
