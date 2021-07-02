@@ -4,7 +4,7 @@ OpenFiles: README.md
 
 Parameter: type
 Widget: SelectInput
-Label: Project Type
+Label: Project type
 Fields: Script, R Markdown (Simplified), R Markdown, Targets, Shiny, None
 Default: Script
 Position: Left
