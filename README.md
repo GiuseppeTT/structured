@@ -24,7 +24,9 @@ Follow these steps:
 - In the top bar, click "File" and then "New Project..."
 - Select "New Directory"
 - Scroll down, select either "Basic Structure Project" or "Intermediate Structure Project"
-- Type a name in "Directory name:" for your project folder and select one of the project types in "Project Type:"
+- Type a name in "Directory name:" for your project folder
+- Choose a folder in "Create project as subdirectory of:" to be the parent directory of your project folder
+- Select one of the project types in "Project Type:"
 - Click "Create Project"
 
 That's it! You can start coding now.
