@@ -5,7 +5,7 @@ test_that("read_file works", {
     content <- read_file(path)
 
     if (.Platform$OS.type == "windows")
-        expect_equal(content, "123\rzn{{test}}\rzn")
+        expect_equal(content, "123\r\n{{test}}\r\n")
     else
         expect_equal(content, "123\n{{test}}\n")
 })
@@ -25,11 +25,11 @@ test_that("write_file works", {
     local_test_directory()
     path <- fs::file_touch("{{123}}.txt")
 
-    write_file(path, true_content)
+    write_file(path, "test\n123\n")
     read_content <- read_file(path)
 
     if (.Platform$OS.type == "windows")
-        expect_equal(read_content, "test\rzn123\rzn")
+        expect_equal(read_content, "test\r\n123\r\n")
     else
         expect_equal(read_content, "test\n123\n")
 })
