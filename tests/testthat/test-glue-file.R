@@ -25,5 +25,8 @@ test_that("glue_file_content works", {
     glue_file_content(path, variables)
     content <- read_file(path)
 
-    expect_equal(content, "123\nmy-variable\n")
+    if (.Platform$OS.type == "windows")
+        expect_equal(content, "123\n\rmy-variable\n\r")
+    else
+        expect_equal(content, "123\nmy-variable\n")
 })
