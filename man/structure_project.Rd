@@ -32,7 +32,7 @@ Create a structured project from a given template.
 }
 \examples{
 \dontrun{
-structure_project("my-cool-project", level = "Basic", type = "Script")
+structure_project("cool-project", level = "Basic", type = "Script")
 }
 
 }

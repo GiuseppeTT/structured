@@ -54,7 +54,7 @@ library(structured)
 # if open is TRUE, open the project (if on RStudio) or simply set the working
 # directory (if not on RStudio). Else, do nothing.
 structure_project(
-    path = "my-cool-project",
+    path = "cool-project",
     level = "Basic",
     type = "Script",
     open = TRUE
