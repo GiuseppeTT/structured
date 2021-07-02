@@ -48,10 +48,14 @@ library(structured)
 # - "Targets"
 # - "Shiny"
 # - "None"
+#
+# if open is TRUE, open the project (if on RStudio) or simply set the working
+# directory (if not on RStudio). Else, do nothing.
 structure_project(
     path = "my-cool-project",
     level = "Basic",
-    type = "Script"
+    type = "Script",
+    open = TRUE
 )
 ```
 
