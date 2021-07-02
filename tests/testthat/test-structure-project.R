@@ -26,7 +26,6 @@ iterate_structures <- function(
 
                 path <- fs::path("my-project")
                 path <- fs::path_abs(path)
-                path <- as.character(path)
                 returned_path <- structure_project(path, level, type, open)
                 expectation_function(test_directory, returned_path, path, level, type, open)
             }
@@ -40,7 +39,7 @@ test_that("structure_project raises no error", {
 
 test_that("returned path is the same path", {
     iterate_structures(function(test_directory, returned_path, path, level, type, open) {
-        expect_equal(returned_path, path)
+        expect_equal(fs::path_abs(returned_path), fs::path_abs(path))
     })
 })
 
@@ -102,8 +101,8 @@ test_that("There are no .gitkeep files", {
 test_that("Working directory changes based on open", {
     iterate_structures(function(test_directory, returned_path, path, level, type, open) {
         if (open)
-            expect_equal(getwd(), path)
+            expect_equal(fs::path_abs(getwd()), fs::path_abs(path))
         else
-            expect_equal(getwd(), test_directory)
+            expect_equal(fs::path_abs(getwd()), fs::path_abs(test_directory))
     })
 })
