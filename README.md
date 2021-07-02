@@ -21,13 +21,13 @@ remotes::install_github("GiuseppeTT/structured")
 
 Follow these steps:
 
-- In the top bar, click "File" and then "New Project..."
-- Select "New Directory"
-- Scroll down, select either "Basic Structured Project" or "Intermediate Structured Project"
-- Type a name in "Directory name:" for your project folder
-- Choose a folder in "Create project as subdirectory of:" to be the parent directory of your project folder
-- Select one of the project types in "Project Type:"
-- Click "Create Project"
+1. In the top bar, click "File" and then "New Project..."
+1. Select "New Directory"
+1. Scroll down, select either "Basic Structured Project" or "Intermediate Structured Project"
+1. Type a name in "Directory name:" for your project folder
+1. Choose a folder in "Create project as subdirectory of:" to be the parent directory of your project folder
+1. Select one of the project types in "Project Type:"
+1. Click "Create Project"
 
 That's it! You can start coding now.
 
