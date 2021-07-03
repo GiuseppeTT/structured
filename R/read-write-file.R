@@ -8,5 +8,5 @@ write_file <- function(
     path,
     content
 ) {
-    writeLines(content, path, sep = "")
+    cat(content, file = path)
 }
