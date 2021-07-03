@@ -2,7 +2,8 @@
 #' Create a structured project
 #'
 #' @description
-#' Create a structured project from a given template.
+#' Create a structured project from a given template. You can find example of
+#' projects built with `{structured}` [here](https://github.com/GiuseppeTT/structured-examples).
 #'
 #' @param path
 #' Path to the new project.

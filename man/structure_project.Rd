@@ -28,7 +28,8 @@ directory. If \code{FALSE} (default), do nothing.}
 Return the project path invisibly.
 }
 \description{
-Create a structured project from a given template.
+Create a structured project from a given template. You can find example of
+projects built with \code{{structured}} \href{https://github.com/GiuseppeTT/structured-examples}{here}.
 }
 \examples{
 \dontrun{

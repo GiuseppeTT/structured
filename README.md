@@ -5,7 +5,14 @@
 [![lint](https://github.com/GiuseppeTT/structured/workflows/lint/badge.svg)](https://github.com/GiuseppeTT/structured/actions)
 <!-- badges: end -->
 
-The `structured` package is a tool to create structured R projects. You can check its documentation [here](https://giuseppett.github.io/structured).
+`structured` is a tool to create structured R projects.
+
+## Useful links
+Some useful links:
+
+- Documentation: https://giuseppett.github.io/structured
+- Example of projects built with `{structured}`: https://github.com/GiuseppeTT/structured-examples
+- GitHub: https://github.com/GiuseppeTT/structured
 
 ## Installation
 Paste these commands in your R console:
@@ -62,3 +69,7 @@ structure_project(
 ```
 
 That's it! You can start coding now.
+
+## Acknowledgements
+
+`{strucutred}` was heavily influenced by "set up tools" like the [`{usethis}`](https://usethis.r-lib.org/) R package and the [`{cookiecutter}`](https://cookiecutter.readthedocs.io) python package.
