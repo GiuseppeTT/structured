@@ -72,4 +72,4 @@ That's it! You can start coding now.
 
 ## Acknowledgements
 
-`{strucutred}` was heavily influenced by "set up tools" like the [`{usethis}`](https://usethis.r-lib.org/) R package and the [cookiecutter](https://cookiecutter.readthedocs.io) python package.
+`{strucutred}` was heavily influenced by "set up tools" like the [`{usethis}`](https://usethis.r-lib.org/) R package and the [`{cookiecutter}`](https://cookiecutter.readthedocs.io) python package.
