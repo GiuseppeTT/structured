@@ -21,6 +21,7 @@ Imports:
 Suggests:
     devtools,
     lintr,
+    rlang,
     testthat (>= 3.0.0),
     usethis,
     withr

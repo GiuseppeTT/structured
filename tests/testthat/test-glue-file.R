@@ -14,7 +14,7 @@ test_that("glue_file_path works", {
     variables <- list(test = "my-project")
     glued_path <- glue_file_path(path, variables)
 
-    expect_equal(glued_path, fs::path("my-project.txt"))
+    expect_equal_path(glued_path, "my-project.txt")
 })
 
 test_that("glue_file_content works", {
@@ -25,5 +25,8 @@ test_that("glue_file_content works", {
     glue_file_content(path, variables)
     content <- read_file(path)
 
-    expect_equal(content, "123\nmy-variable\n")
+    if (.Platform$OS.type == "windows")
+        expect_equal(content, "123\r\nmy-variable\r\n")
+    else
+        expect_equal(content, "123\nmy-variable\n")
 })
