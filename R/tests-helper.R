@@ -23,14 +23,23 @@ expect_equal_path <- function(object, expected) {
     act <- testthat::quasi_label(rlang::enquo(object), arg = "object")
     exp <- testthat::quasi_label(rlang::enquo(expected), arg = "expected")
 
-    # act$true_path <- fs::path_real(fs::path_abs(act$val))
-    # exp$true_path <- fs::path_real(fs::path_abs(exp$val))
-    act$true_path <- fs::path_norm(fs::path_abs(act$val))
-    exp$true_path <- fs::path_norm(fs::path_abs(exp$val))
+    act$true_path <- path_true(act$val)
+    exp$true_path <- path_true(exp$val)
     testthat::expect(
         act$true_path == exp$true_path,
         glue::glue("{act$lab} has true path {act$true_path}, not {exp$true_path}.")
     )
 
     invisible(act$val)
+}
+
+path_true <- function(
+    path
+) {
+    true_path <- fs::path_abs(path)
+
+    if (fs::is_link(path))
+        true_path <- fs::link_path(true_path)
+
+    return(true_path)
 }
