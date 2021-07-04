@@ -10,7 +10,7 @@ local_test_directory <- function(
 copy_test_file <- function(
     file
 ) {
-    root <- fs::path_package("structured", "tests-auxiliar")
+    root <- fs::path_package("structured", "tests-file")
     test_file <- fs::path(root, file)
 
     path <- fs::file_copy(test_file, ".")
