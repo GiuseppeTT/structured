@@ -10,7 +10,7 @@ read_file <- function(
     content <- paste(lines, collapse = next_line)
     content <- paste(content, next_line, sep = "")
 
-    return (content)
+    return(content)
 }
 
 write_file <- function(
