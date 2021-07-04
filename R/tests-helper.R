@@ -38,8 +38,10 @@ path_true <- function(
 ) {
     true_path <- fs::path_abs(path)
 
-    if (fs::is_link(true_path))
-        true_path <- fs::link_path(true_path)
+    if (fs::file_exists(true_path) | fs::dir_exists(true_path) | fs::link_exists(true_path))
+        true_path <- fs::path_real(true_path)
+    else
+        true_path <- fs::path_norm(true_path)
 
     return(true_path)
 }
