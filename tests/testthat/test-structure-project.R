@@ -101,8 +101,8 @@ test_that("There are no .gitkeep files", {
 test_that("Working directory changes based on open", {
     iterate_structures(function(test_directory, returned_path, path, level, type, open) {
         if (open)
-            expect_equal(fs::path_real(fs::path_abs(getwd())), fs::path_real(fs::path_abs(path)))
+            expect_equal_path(getwd(), path)
         else
-            expect_equal(fs::path_real(fs::path_abs(getwd())), fs::path_real(fs::path_abs(test_directory)))
+            expect_equal_path(getwd(), test_directory)
     })
 })
