@@ -38,7 +38,7 @@ path_true <- function(
 ) {
     true_path <- fs::path_abs(path)
 
-    if (fs::is_link(path))
+    if (fs::is_link(true_path))
         true_path <- fs::link_path(true_path)
 
     return(true_path)
