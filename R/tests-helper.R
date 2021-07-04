@@ -18,3 +18,17 @@ copy_test_file <- function(
 
     return(invisible(path))
 }
+
+expect_equal_path <- function(object, expected) {
+    act <- testthat::quasi_label(rlang::enquo(object), arg = "object")
+    exp <- testthat::quasi_label(rlang::enquo(expected), arg = "expected")
+
+    act$true_path <- fs::path_real(fs::path_abs(act$val))
+    exp$true_path <- fs::path_real(fs::path_abs(exp$val))
+    testthat::expect(
+        act$true_path == exp$true_path,
+        glue::glue("{act$lab} has true path {act$true_path}, not {exp$true_path}.")
+    )
+
+    invisible(act$val)
+}
