@@ -14,7 +14,7 @@ test_that("glue_file_path works", {
     variables <- list(test = "my-project")
     glued_path <- glue_file_path(path, variables)
 
-    expect_equal(glued_path, fs::path("my-project.txt"))
+    expect_equal_path(glued_path, "my-project.txt")
 })
 
 test_that("glue_file_content works", {
