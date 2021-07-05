@@ -30,7 +30,7 @@ old_hooks <- fansi::set_knit_hooks(
 
 `{structured}` revolves around the concept of strucures, which is a fancy name for project templates. Well, strongly *structured* templates. So, it is essential to understand those structures to select the most adequate for your project.
 
-Project is a means to an end. Be it analyzing a dataset for a class project or creating a dashboard for a business. `{structured}` defines projects by a combination of two values. The first is **project level** and determines the **complexity** of your project^[We should always aim for the simplest solution, but sometimes complexity is unavoidable.]. The second is **project type** and specifies **how** your project will solve the problem. The next sections give more details about each option those values can assume.
+`{structured}` defines projects by a combination of two values. The first is **project level** and determines the **complexity** of your project^[We should always aim for the simplest solution, but sometimes complexity is unavoidable.]. The second is **project type** and specifies **how** your project will solve the problem. The next sections give more details about each option those values can assume. Finally, at the end of this tutorial, we will also show you some ways to enxtend these structures to your needs.
 
 Before we start, it is important to load some packages.
 
