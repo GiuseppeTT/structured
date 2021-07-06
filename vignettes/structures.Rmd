@@ -98,7 +98,7 @@ The purpose of the additional file/folders are the following:
 ### Script
 **Examples:** [basic](https://github.com/GiuseppeTT/structured-examples/tree/main/basic-script) and [intermediate](https://github.com/GiuseppeTT/structured-examples/tree/main/intermediate-script)
 
-The "script" project type is the most direct approach. You simply code your analysis in a script, run it and its done. The product files should be available in `output/`.
+The "script" project type is the most direct approach. You simply code your analysis in a script, run it and its done. The product files should be available in the `output/` directory.
 
 Using the "basic" project level, the structure is composed of the following files:
 
@@ -111,14 +111,14 @@ structure_project(
 dir_tree("script-project", all = TRUE)
 ```
 
-The purpose of the additional file/folders is the following:
+The purpose of the additional file/folders are the following:
 
 - `analysis.R` Code your analysis. Some common steps are reading data, cleaning data, computing statistics and plotting.
 
 ### R Markdown (Simplified)
 **Examples:** [basic](https://github.com/GiuseppeTT/structured-examples/tree/main/basic-r-markdown-simplified) and [intermediate](https://github.com/GiuseppeTT/structured-examples/tree/main/intermediate-r-markdown-simplified)
 
-The "R markdown (Simplified)" project type is designed for easily creating documents from R Markdown files. Just use the `knit` button in your RStudio window to render the Rmd file and copy the generated document to `output/` folder.
+The "R markdown (Simplified)" project type is designed for easily creating documents from R Markdown files. Just use the `knit` button in your RStudio window to render the Rmd file and copy the generated document to the `output/` folder.
 
 Using the "basic" project level, the structure is composed of the following files:
 
@@ -131,7 +131,7 @@ structure_project(
 dir_tree("r-markdown-simplified-project", all = TRUE)
 ```
 
-The purpose of the additional file/folders is the following:
+The purpose of the additional file/folders are the following:
 
 - `analysis.Rmd` Write and code your analysis. Some common sections are database description (read data), results (compute statistics) and conclusion.
 
@@ -151,10 +151,12 @@ structure_project(
 dir_tree("r-markdown-project", all = TRUE)
 ```
 
-The purpose of the additional file/folders is the following:
+The purpose of the additional file/folders are the following:
 
 - `Rmd/` Save any R Markdown file.
+
 - `Rmd/analysis.Rmd` Write and code your analysis. Some common sections are database description (read data), results (compute statistics) and conclusion.
+
 - `render.R` You do not have to do anything as this script is automatically configured. Just run it to render the R Markdown files.
 
 If you want to use the `knit` button in this structure, you need to configure the knit directory to the project directory. You can do that by clicking "Knit" -> "Knit Directory" -> "Project Directory". For more information, check the [The working directory for R code chunks](https://bookdown.org/yihui/rmarkdown-cookbook/working-directory.html) subchapter.
@@ -162,7 +164,7 @@ If you want to use the `knit` button in this structure, you need to configure th
 ### Targets
 **Examples:** [basic](https://github.com/GiuseppeTT/structured-examples/tree/main/basic-targets) and [intermediate](https://github.com/GiuseppeTT/structured-examples/tree/main/intermediate-targets)
 
-The "targets" project type is specially useful for big and slow to run analysis. The idea here is to leverage the `{targets}` package to organize your analysis code even more and run only the necessary parts when changing the code.
+The "targets" project type is specially useful for big and slow to run analysis. The idea here is to leverage the `{targets}` package to organize your analysis code even more and run only the necessary parts when changing something.
 
 Using the "basic" project level, the structure is composed of the following files:
 
@@ -175,12 +177,12 @@ structure_project(
 dir_tree("targets-project", all = TRUE)
 ```
 
-The purpose of the additional file/folders is the following:
+The purpose of the additional file/folders are the following:
 
 - `_targets.R` Code your analysis workflow. [targets](https://docs.ropensci.org/targets/) documentation is a great reference.
 
 ### Shiny
-The "targets" project type BLAH.
+The "shiny" project type BLAH.
 
 Using the "basic" project level, the structure is composed of the following files:
 
@@ -193,9 +195,15 @@ structure_project(
 dir_tree("shiny-project", all = TRUE)
 ```
 
-The purpose of the additional file/folders is the following:
+The purpose of the additional file/folders are the following:
 
-- `BLAH` BLAH
+- `R/global.R` BLAH
+
+- `R/ui.R` BLAH
+
+- `R/server.R` BLAH
+
+- `app.R` BLAH
 
 ### None
 Text.
