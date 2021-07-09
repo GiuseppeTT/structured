@@ -182,7 +182,9 @@ The purpose of the additional file/folders are the following:
 - `_targets.R` Code your analysis workflow. [targets](https://docs.ropensci.org/targets/) documentation is a great reference.
 
 ### Shiny
-The "shiny" project type BLAH.
+**Examples:** [basic](https://github.com/GiuseppeTT/structured-examples/tree/main/basic-shiny) and [intermediate](https://github.com/GiuseppeTT/structured-examples/tree/main/intermediate-shiny)
+
+The "shiny" project type presents a different approach to projects. Instead of providing some static files (e.g., images and pdfs), it uses the `{shiny}` package to build a web application. One big use case is building interactive dashboards (check `{shinydashboard}`).
 
 Using the "basic" project level, the structure is composed of the following files:
 
@@ -197,16 +199,16 @@ dir_tree("shiny-project", all = TRUE)
 
 The purpose of the additional file/folders are the following:
 
-- `R/global.R` BLAH
+- `R/global.R` Define global variables.
 
-- `R/ui.R` BLAH
+- `R/ui.R` Define the app UI (user interface).
 
-- `R/server.R` BLAH
+- `R/server.R` Define the app server (code responsible for doing calculations, generate plots, etc).
 
-- `app.R` BLAH
+- `app.R` You do not have to do anything as this script is automatically configured. Just run it to host the shiny application. For more information, check the {shiny} [documentation](https://shiny.rstudio.com/).
 
 ### None
-Text.
+The "none" project type is, well..., nothing. It adds no file nor folder to the project, except for the files already added by the chose project level. In summary, it is good option if you just want the raw template without an optioned approach to solve your problem.
 
 Using the "basic" project level, the structure is composed of the following files:
 
@@ -220,5 +222,6 @@ dir_tree("none-project", all = TRUE)
 ```
 
 ## Extensions
+The presented structures are flexible. If you feel you need to add a file, folder or even delete some, please do so!
 
-Blah blah, you may want to add `clean.R`, `data/raw`, `presentation.Rmd`, etc.
+The "subfolder script extension" example ([basic version](https://github.com/GiuseppeTT/structured-examples/tree/main/extension-subfolder-basic-script) and [intermediate version](https://github.com/GiuseppeTT/structured-examples/tree/main/extension-subfolder-intermediate-script)) illustrates this process. It adds subfolders such as `data/clean/` and `output/figure/` to further divide the data and output files. Moreover, it moved the `analysis.R` script to the `script/` folder and added a `clean.R` script to be excute first to clean the data.
