@@ -28,9 +28,9 @@ old_hooks <- fansi::set_knit_hooks(
 )
 ```
 
-`{structured}` revolves around the concept of strucures, which is a fancy name for project templates. Well, strongly *structured* templates. So, it is essential to understand those structures to select the most adequate for your project.
+`{structured}` revolves around the concept of structures, which is a fancy name for project templates. Well, strongly *structured* templates. So, it is essential to understand those structures to select the most adequate for your project.
 
-`{structured}` defines projects by a combination of two values. The first is **project level** and determines the **complexity** of your project^[We should always aim for the simplest solution, but sometimes complexity is unavoidable.]. The second is **project type** and specifies **how** your project will solve your problem. The next sections give more details about each option those values can assume. Finally, at the end of this tutorial, we will also show you some ways to enxtend these structures to your needs.
+`{structured}` defines projects by a combination of two values. The first is **project level** and determines the **complexity** of your project^[We should always aim for the simplest solution, but sometimes complexity is unavoidable.]. The second is **project type** and specifies **how** your project will solve your problem. The next sections give more details about each option those values can assume. Finally, at the end of this tutorial, we will also show you some ways to extend these structures to your needs.
 
 Before we start, it is important to load some packages.
 
@@ -47,7 +47,7 @@ library(structured)
 
 ## Project level
 ### Basic
-The "basic" project level is simple, minimal, but complete enough to accomodate all the project types. In other words, it is a perfect starting point for newbies and an excelent use for quick and simple projects.
+The "basic" project level is simple, minimal, but complete enough to accommodate all the project types. In other words, it is a perfect starting point for newbies and an excellent use for quick and simple projects.
 
 The structure is composed of the following files:
 
@@ -68,7 +68,7 @@ The purpose of each file/folder is the following:
 
 - `extra/` Save any file that is not data, output or code but is related to the project. Some cases are professor instructions about a class assignment and meeting notes.
 
-- `R/` Save auxiliar R files. That is, files that are not run directly. Some examples are `ui.R` and `server.R`, which are used by the `{shiny}` package.
+- `R/` Save auxiliary R files. That is, files that are not run directly. Some examples are `ui.R` and `server.R`, which are used by the `{shiny}` package.
 
 - `R/functions.R` Write your R functions used in the rest of the project. This helps keeping your code clean, similar to the effect of adding subfolder such as `data/` to organize your files.
 
@@ -92,7 +92,7 @@ The purpose of the additional file/folders are the following:
 
 - `README.md` Write must read instructions about your project. Some useful topics are a quick description of what the project is about and steps on how to run it.
 
-- `.gitignore` This file represents more than its funcitonality. The idea here is that you use [git](https://git-scm.com/) to version control your project. This way you will never be afraid again of changing one line and breaking everything. Plus, it makes team coding much easier. The [Happy Git With R](https://happygitwithr.com/) notes and the [Git and Github](https://r-pkgs.org/git.html) chapter are great resources to learn git for R users.
+- `.gitignore` This file represents more than its functionality. The idea here is that you use [git](https://git-scm.com/) to version control your project. This way you will never be afraid again of changing one line and breaking everything. Plus, it makes team coding much easier. The [Happy Git With R](https://happygitwithr.com/) notes and the [Git and Github](https://r-pkgs.org/git.html) chapter are great resources to learn git for R users.
 
 ## Project type
 ### Script
@@ -224,4 +224,4 @@ dir_tree("none-project", all = TRUE)
 ## Extensions
 All the presented structures were designed with the special consideration to be flexible. Therefore, if you feel you need to add a file, folder or even delete some, please do so!
 
-The "subfolder script extension" example (examples: [basic version](https://github.com/GiuseppeTT/structured-examples/tree/main/extension-subfolder-basic-script) and [intermediate version](https://github.com/GiuseppeTT/structured-examples/tree/main/extension-subfolder-intermediate-script)) illustrates this process. It adds subfolders such as `data/clean/` and `output/figure/` to further divide the data and output files. Moreover, it moved the `analysis.R` script to the `script/` folder and added a `clean.R` script to be excuted first to clean the data.
+The "subfolder script extension" example (examples: [basic version](https://github.com/GiuseppeTT/structured-examples/tree/main/extension-subfolder-basic-script) and [intermediate version](https://github.com/GiuseppeTT/structured-examples/tree/main/extension-subfolder-intermediate-script)) illustrates this process. It adds subfolders such as `data/clean/` and `output/figure/` to further divide the data and output files. Moreover, it moved the `analysis.R` script to the `script/` folder and added a `clean.R` script to be executed first to clean the data.
