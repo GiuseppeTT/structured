@@ -92,7 +92,7 @@ The purpose of the additional file/folders are the following:
 
 - `README.md` Write must read instructions about your project. Some useful topics are a quick description of what the project is about and steps on how to run it.
 
-- `.gitignore` This file represents more than its functionality. The idea here is that you use [git](https://git-scm.com/) to version control your project. This way you will never be afraid again of changing one line and breaking everything. Plus, it makes team coding much easier. The [Happy Git With R](https://happygitwithr.com/) notes and the [Git and Github](https://r-pkgs.org/git.html) chapter are great resources to learn git for R users.
+- `.gitignore` This file represents more than its functionality. The idea here is that you use [git](https://git-scm.com/) to version control your project. This way you will never be afraid again of changing one line and breaking everything. Plus, it makes team coding much better. The [Happy Git With R](https://happygitwithr.com/) notes and the [Git and Github](https://r-pkgs.org/git.html) chapter are great resources to learn git for R users.
 
 ## Project type
 ### Script
@@ -118,7 +118,7 @@ The purpose of the additional file/folders are the following:
 ### R Markdown (Simplified)
 **Examples:** [basic version](https://github.com/GiuseppeTT/structured-examples/tree/main/basic-r-markdown-simplified) and [intermediate version](https://github.com/GiuseppeTT/structured-examples/tree/main/intermediate-r-markdown-simplified)
 
-The "R markdown (Simplified)" project type is designed for easily creating documents from R Markdown files. Just use the `knit` button in your RStudio to render the Rmd file and copy the generated document to the `output/` folder.
+The "R markdown (simplified)" project type is designed for easily creating documents from R Markdown files. Just use the `knit` button in your RStudio to render the Rmd file and copy the generated document to the `output/` folder.
 
 Using the "basic" project level, the structure is composed of the following files:
 
@@ -138,7 +138,7 @@ The purpose of the additional file/folders are the following:
 ### R Markdown
 **Examples:** [basic version](https://github.com/GiuseppeTT/structured-examples/tree/main/basic-r-markdown) and [intermediate version](https://github.com/GiuseppeTT/structured-examples/tree/main/intermediate-r-markdown)
 
-The "R markdown" project type offers a more programmatic approach to generating documents than the "R markdown (Simplified)" project type. Instead of relying on the `knit` button, you run a script that will automatically render all Rmd documents and move them to the `output/` folder.
+The "R markdown" project type offers a more programmatic approach to generating documents than the "R markdown (simplified)" project type. Instead of relying on the `knit` button, you run a script that will automatically render all Rmd documents and move them to the `output/` folder.
 
 Using the "basic" project level, the structure is composed of the following files:
 
@@ -179,7 +179,7 @@ dir_tree("targets-project", all = TRUE)
 
 The purpose of the additional file/folders are the following:
 
-- `_targets.R` Code your analysis workflow. I recommend to read the `{targets}` [documentation](https://docs.ropensci.org/targets/)
+- `_targets.R` Code your analysis workflow. I recommend reading the `{targets}` [documentation](https://docs.ropensci.org/targets/)
 
 ### Shiny
 **Examples:** [basic version](https://github.com/GiuseppeTT/structured-examples/tree/main/basic-shiny) and [intermediate version](https://github.com/GiuseppeTT/structured-examples/tree/main/intermediate-shiny)
@@ -224,4 +224,4 @@ dir_tree("none-project", all = TRUE)
 ## Extensions
 All the presented structures were designed with the special consideration to be flexible. Therefore, if you feel you need to add a file, folder or even delete some, please do so!
 
-The "subfolder script extension" example (examples: [basic version](https://github.com/GiuseppeTT/structured-examples/tree/main/extension-subfolder-basic-script) and [intermediate version](https://github.com/GiuseppeTT/structured-examples/tree/main/extension-subfolder-intermediate-script)) illustrates this process. It adds subfolders such as `data/clean/` and `output/figure/` to further divide the data and output files. Moreover, it moved the `analysis.R` script to the `script/` folder and added a `clean.R` script to be executed first to clean the data.
+The "subfolder script extension" example ([basic version](https://github.com/GiuseppeTT/structured-examples/tree/main/extension-subfolder-basic-script) and [intermediate version](https://github.com/GiuseppeTT/structured-examples/tree/main/extension-subfolder-intermediate-script)) illustrates this process. It adds subfolders such as `data/clean/` and `output/figure/` to further divide the data and output files. Moreover, the `analysis.R` script was moved to the `script/` folder along with a new `clean.R` file responsible for cleaning the data before the analysis.
