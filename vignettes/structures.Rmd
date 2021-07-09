@@ -30,7 +30,7 @@ old_hooks <- fansi::set_knit_hooks(
 
 `{structured}` revolves around the concept of strucures, which is a fancy name for project templates. Well, strongly *structured* templates. So, it is essential to understand those structures to select the most adequate for your project.
 
-`{structured}` defines projects by a combination of two values. The first is **project level** and determines the **complexity** of your project^[We should always aim for the simplest solution, but sometimes complexity is unavoidable.]. The second is **project type** and specifies **how** your project will solve the problem. The next sections give more details about each option those values can assume. Finally, at the end of this tutorial, we will also show you some ways to enxtend these structures to your needs.
+`{structured}` defines projects by a combination of two values. The first is **project level** and determines the **complexity** of your project^[We should always aim for the simplest solution, but sometimes complexity is unavoidable.]. The second is **project type** and specifies **how** your project will solve your problem. The next sections give more details about each option those values can assume. Finally, at the end of this tutorial, we will also show you some ways to enxtend these structures to your needs.
 
 Before we start, it is important to load some packages.
 
@@ -75,7 +75,7 @@ The purpose of each file/folder is the following:
 - `basic-project.Rproj` (`<project directory name>.Rproj`) RStudio project file. The [Project-oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) article and the [Workflow: projects](https://r4ds.had.co.nz/workflow-projects.html) chapter are great reference. In short, this little guy allows you to break free from all the evil that comes from `setwd("path/that/only/works/on/my/computer")` and use `read_csv("data/my-data.csv")` directly.
 
 ### Intermediate
-If the objective of the "basic" project level is getting the job done, the objetive of the "intermediate" project level is getting the job done and sharable. Even if it means sharing with yourself six months in the future.
+If the objective of the "basic" project level is getting the job done, the goal of the "intermediate" project level is getting the job done and sharable. Even if it means sharing with yourself six months in the future.
 
 The structure is composed of the following files:
 
@@ -96,9 +96,9 @@ The purpose of the additional file/folders are the following:
 
 ## Project type
 ### Script
-**Examples:** [basic](https://github.com/GiuseppeTT/structured-examples/tree/main/basic-script) and [intermediate](https://github.com/GiuseppeTT/structured-examples/tree/main/intermediate-script)
+**Examples:** [basic version](https://github.com/GiuseppeTT/structured-examples/tree/main/basic-script) and [intermediate version](https://github.com/GiuseppeTT/structured-examples/tree/main/intermediate-script)
 
-The "script" project type is the most direct approach. You simply code your analysis in a script, run it and its done. The product files should be available in the `output/` directory.
+The "script" project type is the most direct approach to solving a problem. You simply code your analysis in a script, run it and its done. The product files should be available in the `output/` directory.
 
 Using the "basic" project level, the structure is composed of the following files:
 
@@ -116,9 +116,9 @@ The purpose of the additional file/folders are the following:
 - `analysis.R` Code your analysis. Some common steps are reading data, cleaning data, computing statistics and plotting.
 
 ### R Markdown (Simplified)
-**Examples:** [basic](https://github.com/GiuseppeTT/structured-examples/tree/main/basic-r-markdown-simplified) and [intermediate](https://github.com/GiuseppeTT/structured-examples/tree/main/intermediate-r-markdown-simplified)
+**Examples:** [basic version](https://github.com/GiuseppeTT/structured-examples/tree/main/basic-r-markdown-simplified) and [intermediate version](https://github.com/GiuseppeTT/structured-examples/tree/main/intermediate-r-markdown-simplified)
 
-The "R markdown (Simplified)" project type is designed for easily creating documents from R Markdown files. Just use the `knit` button in your RStudio window to render the Rmd file and copy the generated document to the `output/` folder.
+The "R markdown (Simplified)" project type is designed for easily creating documents from R Markdown files. Just use the `knit` button in your RStudio to render the Rmd file and copy the generated document to the `output/` folder.
 
 Using the "basic" project level, the structure is composed of the following files:
 
@@ -133,12 +133,12 @@ dir_tree("r-markdown-simplified-project", all = TRUE)
 
 The purpose of the additional file/folders are the following:
 
-- `analysis.Rmd` Write and code your analysis. Some common sections are database description (read data), results (compute statistics) and conclusion.
+- `analysis.Rmd` Write and code your analysis. Some common sections are database description (read data), results (compute statistics) and conclusion. If you want to learn more about R Markdown, check its [documentation](https://rmarkdown.rstudio.com/).
 
 ### R Markdown
-**Examples:** [basic](https://github.com/GiuseppeTT/structured-examples/tree/main/basic-r-markdown) and [intermediate](https://github.com/GiuseppeTT/structured-examples/tree/main/intermediate-r-markdown)
+**Examples:** [basic version](https://github.com/GiuseppeTT/structured-examples/tree/main/basic-r-markdown) and [intermediate version](https://github.com/GiuseppeTT/structured-examples/tree/main/intermediate-r-markdown)
 
-The "R markdown" project type offers a more programmatic approach to the "R markdown (Simplified)" project type. Instead of relying on the `knit` button, you run a script that will automatically render all Rmd documents and move them to the `output/` folder.
+The "R markdown" project type offers a more programmatic approach to generating documents than the "R markdown (Simplified)" project type. Instead of relying on the `knit` button, you run a script that will automatically render all Rmd documents and move them to the `output/` folder.
 
 Using the "basic" project level, the structure is composed of the following files:
 
@@ -155,14 +155,14 @@ The purpose of the additional file/folders are the following:
 
 - `Rmd/` Save any R Markdown file.
 
-- `Rmd/analysis.Rmd` Write and code your analysis. Some common sections are database description (read data), results (compute statistics) and conclusion.
+- `Rmd/analysis.Rmd` Write and code your analysis. Some common sections are database description (read data), results (compute statistics) and conclusion. If you want to learn more about R Markdown, check its [documentation](https://rmarkdown.rstudio.com/).
 
 - `render.R` You do not have to do anything as this script is automatically configured. Just run it to render the R Markdown files.
 
-If you want to use the `knit` button in this structure, you need to configure the knit directory to the project directory. You can do that by clicking "Knit" -> "Knit Directory" -> "Project Directory". For more information, check the [The working directory for R code chunks](https://bookdown.org/yihui/rmarkdown-cookbook/working-directory.html) subchapter.
+**Observation:** If you want to use the `knit` button in this structure, you need to configure the knit directory to the project directory. You can do that by clicking "Knit" -> "Knit Directory" -> "Project Directory". For more information, check the [The working directory for R code chunks](https://bookdown.org/yihui/rmarkdown-cookbook/working-directory.html) subchapter.
 
 ### Targets
-**Examples:** [basic](https://github.com/GiuseppeTT/structured-examples/tree/main/basic-targets) and [intermediate](https://github.com/GiuseppeTT/structured-examples/tree/main/intermediate-targets)
+**Examples:** [basic version](https://github.com/GiuseppeTT/structured-examples/tree/main/basic-targets) and [intermediate version](https://github.com/GiuseppeTT/structured-examples/tree/main/intermediate-targets)
 
 The "targets" project type is specially useful for big and slow to run analysis. The idea here is to leverage the `{targets}` package to organize your analysis code even more and run only the necessary parts when changing something.
 
@@ -179,12 +179,12 @@ dir_tree("targets-project", all = TRUE)
 
 The purpose of the additional file/folders are the following:
 
-- `_targets.R` Code your analysis workflow. [targets](https://docs.ropensci.org/targets/) documentation is a great reference.
+- `_targets.R` Code your analysis workflow. I recommend to read the `{targets}` [documentation](https://docs.ropensci.org/targets/)
 
 ### Shiny
-**Examples:** [basic](https://github.com/GiuseppeTT/structured-examples/tree/main/basic-shiny) and [intermediate](https://github.com/GiuseppeTT/structured-examples/tree/main/intermediate-shiny)
+**Examples:** [basic version](https://github.com/GiuseppeTT/structured-examples/tree/main/basic-shiny) and [intermediate version](https://github.com/GiuseppeTT/structured-examples/tree/main/intermediate-shiny)
 
-The "shiny" project type presents a different approach to projects. Instead of providing some static files (e.g., images and pdfs), it uses the `{shiny}` package to build a web application. One big use case is building interactive dashboards (check `{shinydashboard}`).
+The "shiny" project type offers a different approach to projects. Instead of producing some static files (e.g., images and pdfs), it uses the `{shiny}` package to build a web application. One big use case are interactive dashboards (check the `{shinydashboard}` package).
 
 Using the "basic" project level, the structure is composed of the following files:
 
@@ -199,16 +199,16 @@ dir_tree("shiny-project", all = TRUE)
 
 The purpose of the additional file/folders are the following:
 
-- `R/global.R` Define global variables.
+- `R/global.R` Define global variables. For instance, a data frame containing the data to be presented in the dashboard.
 
-- `R/ui.R` Define the app UI (user interface).
+- `R/ui.R` Define the app UI (user interface). In plain English, what the user sees and interact in their browser.
 
-- `R/server.R` Define the app server (code responsible for doing calculations, generate plots, etc).
+- `R/server.R` Define the app server. In other words, the code responsible for doing calculations, generating plots, etc.
 
-- `app.R` You do not have to do anything as this script is automatically configured. Just run it to host the shiny application. For more information, check the {shiny} [documentation](https://shiny.rstudio.com/).
+- `app.R` You do not have to do anything as this script is automatically configured. Just run it to host the shiny application. For more information, check the `{shiny}` [documentation](https://shiny.rstudio.com/).
 
 ### None
-The "none" project type is, well..., nothing. It adds no file nor folder to the project, except for the files already added by the chose project level. In summary, it is good option if you just want the raw template without an optioned approach to solve your problem.
+The "none" project type is, well..., nothing. It adds no file nor folder to the project, except for the files already included by the chosen project level. In summary, it is good option if you just want the raw template without an optioned approach to solve your problem.
 
 Using the "basic" project level, the structure is composed of the following files:
 
@@ -222,6 +222,6 @@ dir_tree("none-project", all = TRUE)
 ```
 
 ## Extensions
-The presented structures are flexible. If you feel you need to add a file, folder or even delete some, please do so!
+All the presented structures were designed with the special consideration to be flexible. Therefore, if you feel you need to add a file, folder or even delete some, please do so!
 
-The "subfolder script extension" example ([basic version](https://github.com/GiuseppeTT/structured-examples/tree/main/extension-subfolder-basic-script) and [intermediate version](https://github.com/GiuseppeTT/structured-examples/tree/main/extension-subfolder-intermediate-script)) illustrates this process. It adds subfolders such as `data/clean/` and `output/figure/` to further divide the data and output files. Moreover, it moved the `analysis.R` script to the `script/` folder and added a `clean.R` script to be excute first to clean the data.
+The "subfolder script extension" example (examples: [basic version](https://github.com/GiuseppeTT/structured-examples/tree/main/extension-subfolder-basic-script) and [intermediate version](https://github.com/GiuseppeTT/structured-examples/tree/main/extension-subfolder-intermediate-script)) illustrates this process. It adds subfolders such as `data/clean/` and `output/figure/` to further divide the data and output files. Moreover, it moved the `analysis.R` script to the `script/` folder and added a `clean.R` script to be excuted first to clean the data.
