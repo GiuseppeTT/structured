@@ -5,7 +5,7 @@
 [![lint](https://github.com/GiuseppeTT/structured/workflows/lint/badge.svg)](https://github.com/GiuseppeTT/structured/actions)
 <!-- badges: end -->
 
-`structured` is a tool to create structured R projects.
+`structured` is a tool to create structured R projects. It contains fully documented templates to automate your project creation process.
 
 ## Useful links
 Some useful links:
