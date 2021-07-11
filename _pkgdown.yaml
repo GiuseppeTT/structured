@@ -1,0 +1,16 @@
+navbar:
+  structure:
+    left:
+      - home
+      - structures
+      - reference
+      - articles
+      - tutorials
+      - news
+    right:
+      - github
+  components:
+    structures:
+      text: Structures
+      href: articles/structures.html
+    articles: null

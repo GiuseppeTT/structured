@@ -5,12 +5,13 @@
 [![lint](https://github.com/GiuseppeTT/structured/workflows/lint/badge.svg)](https://github.com/GiuseppeTT/structured/actions)
 <!-- badges: end -->
 
-`structured` is a tool to create structured R projects.
+`structured` is a tool to create structured R projects. It contains fully documented templates to automate your project creation process.
 
 ## Useful links
 Some useful links:
 
 - Documentation: https://giuseppett.github.io/structured
+- Description of structures (project templates): https://giuseppett.github.io/structured/articles/structures.html
 - Example of projects built with `{structured}`: https://github.com/GiuseppeTT/structured-examples
 - GitHub: https://github.com/GiuseppeTT/structured
 
@@ -72,4 +73,4 @@ That's it! You can start coding now.
 
 ## Acknowledgements
 
-`{strucutred}` was heavily influenced by "set up tools" like the [`{usethis}`](https://usethis.r-lib.org/) R package and the [`{cookiecutter}`](https://cookiecutter.readthedocs.io) python package.
+`{structured}` was heavily influenced by "set up tools" like the [`{usethis}`](https://usethis.r-lib.org/) R package and the [`{cookiecutter}`](https://cookiecutter.readthedocs.io) python package.
